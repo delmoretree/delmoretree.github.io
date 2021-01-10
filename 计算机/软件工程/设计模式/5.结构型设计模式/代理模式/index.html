@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		代理模式 | 
+	 
+	1⃣️3⃣️太狼🐺
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<a id="title" href="/" class="logo">1⃣️3⃣️太狼🐺</a>
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										国际关系
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E5%9B%BD%E9%99%85%E5%85%B3%E7%B3%BB/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E%E4%B8%8B%E5%90%84%E5%9B%BD%E6%8F%B4%E5%8A%A9%E7%9A%84%E8%83%8C%E5%90%8E%E6%98%AF%E5%9B%BD%E9%99%85%E6%94%BF%E6%B2%BB%E5%88%A9%E7%9B%8A/">
+										新冠肺炎下各国援助的背后是国际政治利益
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										分析学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数学分析
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1-极限理论
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-0-%E5%AE%9E%E6%95%B0%E7%B3%BB%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/">
+										1-0-实数系的连续性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-1-%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90/">
+										1-1-函数极限
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-2-%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90/">
+										1-2-数列极限
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-3-%E6%97%A0%E7%A9%B7%E5%B0%8F/">
+										1-3-无穷小
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-4-%E8%BF%9E%E7%BB%AD%E4%B8%8E%E9%97%B4%E6%96%AD/">
+										1-4-连续与间断
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2-微分学
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-1-%E5%AF%BC%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5/">
+										2-1-导数的概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										初等数学
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/%E4%B8%8D%E7%AD%89%E5%BC%8F/">
+										不等式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										计算机
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										操作系统
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/CentOS%E4%B8%AD%E7%9A%84RabbitMQ/">
+										CentOS中的RabbitMQ
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/GitLab%E6%8E%92%E9%94%99/">
+										GitLab排错
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Linux%E6%8C%82%E8%BD%BDWindows%E5%85%B1%E4%BA%AB%E7%9B%98/">
+										Linux挂载Windows共享盘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E7%BD%AE/">
+										防火墙设置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据库
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">
+										MySQL常见操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Redis
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										组成原理
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1. 指令
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-1-%E6%8C%87%E4%BB%A4%E6%A6%82%E8%BF%B0/">
+										1-1-指令概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-2-%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4/">
+										1-2-算数运算指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-3-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%8C%87%E4%BB%A4/">
+										1-3-数据传输指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-4-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4/">
+										1-4-逻辑运算指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-5-%E5%86%B3%E7%AD%96%E6%8C%87%E4%BB%A4/">
+										1-5-决策指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-6-%E8%BF%87%E7%A8%8B%E7%9A%84%E6%89%A7%E8%A1%8C/">
+										1-6-过程的执行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/%E9%99%84-MIPS%E6%8C%87%E4%BB%A4/">
+										附-MIPS指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										软件工程
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										设计模式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1.面向对象
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%85%85%E8%A1%80%E6%A8%A1%E5%9E%8B%E5%92%8C%E8%B4%AB%E8%A1%80%E6%A8%A1%E5%9E%8B/">
+										充血模型和贫血模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%9B%9B%E5%A4%A7%E7%89%B9%E6%80%A7/">
+										四大特性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%9F%BA%E4%BA%8E%E6%8E%A5%E5%8F%A3%E8%80%8C%E9%9D%9E%E5%AE%9E%E7%8E%B0%E7%BC%96%E7%A8%8B/">
+										基于接口而非实现编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B/">
+										面向对象与面向过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2.设计原则
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/DRY%E5%8E%9F%E5%88%99/">
+										DRY原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/KISS%E3%80%81YAGNI%E5%8E%9F%E5%88%99/">
+										KISS、YAGNI原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/LOD%E5%8E%9F%E5%88%99/">
+										LOD原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/SOLID%E5%8E%9F%E5%88%99/">
+										SOLID原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%94%A8%E6%80%A7/">
+										代码复用性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3.规范与重构
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/3.%E8%A7%84%E8%8C%83%E4%B8%8E%E9%87%8D%E6%9E%84/%E9%87%8D%E6%9E%84/">
+										重构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4.创建型设计模式
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+										原型模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										建造者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5.结构型设计模式
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">
+										享元模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down  active">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">
+										代理模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
+										桥接模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">
+										组合模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										装饰器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										适配器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										6.行为型设计模式
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%BC%8F/">
+										中介模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/">
+										模板模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
+										策略模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/">
+										职责链模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										观察者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										迭代器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										软件开发
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										JAVA
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JAVA/%E5%86%85%E7%9C%81/">
+										内省
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										JVM
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JVM/JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">
+										JVM内存结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spring
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/IoC%E5%AE%B9%E5%99%A8/">
+										IoC容器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/%E6%80%BB%E8%A7%88/">
+										总览
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/%E9%85%8D%E7%BD%AE/">
+										配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	代理模式
+</h1>
+<div class="article-meta">
+	
+	<span>Delmore</span>
+	<span>2020-10-28 19:30:17</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="&#x901A;&#x8FC7;&#x5F15;&#x5165;&#x4EE3;&#x7406;&#x7C7B;&#x6765;&#x7ED9;&#x539F;&#x59CB;&#x7C7B;&#x9644;&#x52A0;&#x529F;&#x80FD;">&#x901A;&#x8FC7;&#x5F15;&#x5165;&#x4EE3;&#x7406;&#x7C7B;&#x6765;&#x7ED9;&#x539F;&#x59CB;&#x7C7B;&#x9644;&#x52A0;&#x529F;&#x80FD;</h1>
+<p><strong>&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#xFF08;Proxy Design Pattern&#xFF09;</strong> &#x5728;&#x4E0D;&#x6539;&#x53D8;&#x539F;&#x59CB;&#x7C7B;&#xFF08;&#x6216;&#x53EB;&#x88AB;&#x4EE3;&#x7406;&#x7C7B;&#xFF09;&#x4EE3;&#x7801;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x901A;&#x8FC7;&#x5F15;&#x5165;&#x4EE3;&#x7406;&#x7C7B;&#x6765;&#x7ED9;&#x539F;&#x59CB;&#x7C7B;&#x9644;&#x52A0;&#x529F;&#x80FD;&#x3002;</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> IUserController {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  UserVo <span class="fu">login</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password);</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  UserVo <span class="fu">register</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password);</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserController <span class="kw">implements</span> IUserController {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;...</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">login</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password) {</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;login&#x903B;&#x8F91;...</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x8FD4;&#x56DE;UserVo&#x6570;&#x636E;...</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">register</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password) {</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;register&#x903B;&#x8F91;...</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x8FD4;&#x56DE;UserVo&#x6570;&#x636E;...</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> UserControllerProxy <span class="kw">implements</span> IUserController {</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> MetricsCollector metricsCollector;</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> UserController userController;</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">UserControllerProxy</span>(UserController userController) {</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">userController</span> = userController;</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">metricsCollector</span> = <span class="kw">new</span> <span class="fu">MetricsCollector</span>();</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">login</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password) {</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> startTimestamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x59D4;&#x6258;</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    UserVo userVo = userController.<span class="fu">login</span>(telephone, password);</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> endTimeStamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> responseTime = endTimeStamp - startTimestamp;</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="bu">RequestInfo</span> requestInfo = <span class="kw">new</span> <span class="bu">RequestInfo</span>(<span class="st">&quot;login&quot;</span>, responseTime, startTimestamp);</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    metricsCollector.<span class="fu">recordRequest</span>(requestInfo);</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> userVo;</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>  <span class="at">@Override</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> UserVo <span class="fu">register</span>(<span class="bu">String</span> telephone, <span class="bu">String</span> password) {</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> startTimestamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    UserVo userVo = userController.<span class="fu">register</span>(telephone, password);</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> endTimeStamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="dt">long</span> responseTime = endTimeStamp - startTimestamp;</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="bu">RequestInfo</span> requestInfo = <span class="kw">new</span> <span class="bu">RequestInfo</span>(<span class="st">&quot;register&quot;</span>, responseTime, startTimestamp);</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    metricsCollector.<span class="fu">recordRequest</span>(requestInfo);</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> userVo;</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>IUserController userController = <span class="kw">new</span> <span class="fu">UserControllerProxy</span>(<span class="kw">new</span> <span class="fu">UserController</span>());</span></code></pre></div>
+<p>&#x4EE3;&#x7406;&#x7C7B; <code>UserControllerProxy</code> &#x8D1F;&#x8D23;&#x5728;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x524D;&#x540E;&#x9644;&#x52A0;&#x5176;&#x4ED6;&#x903B;&#x8F91;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x59D4;&#x6258;&#x7684;&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x539F;&#x59CB;&#x7C7B;&#x6765;&#x6267;&#x884C;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x3002;</p>
+<h1 id="&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x52A8;&#x6001;&#x5730;&#x521B;&#x5EFA;&#x539F;&#x59CB;&#x7C7B;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7406;&#x7C7B;">&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x52A8;&#x6001;&#x5730;&#x521B;&#x5EFA;&#x539F;&#x59CB;&#x7C7B;&#x5BF9;&#x5E94;&#x7684;&#x4EE3;&#x7406;&#x7C7B;</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> MetricsCollectorProxy {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> MetricsCollector metricsCollector;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">MetricsCollectorProxy</span>() {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">metricsCollector</span> = <span class="kw">new</span> <span class="fu">MetricsCollector</span>();</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Object</span> <span class="fu">createProxy</span>(<span class="bu">Object</span> proxiedObject) {</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Class</span>&lt;?&gt;[] interfaces = proxiedObject.<span class="fu">getClass</span>().<span class="fu">getInterfaces</span>();</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    DynamicProxyHandler handler = <span class="kw">new</span> <span class="fu">DynamicProxyHandler</span>(proxiedObject);</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="bu">Proxy</span>.<span class="fu">newProxyInstance</span>(proxiedObject.<span class="fu">getClass</span>().<span class="fu">getClassLoader</span>(), interfaces, handler);</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="kw">class</span> DynamicProxyHandler <span class="kw">implements</span> <span class="bu">InvocationHandler</span> {</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">Object</span> proxiedObject;</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="fu">DynamicProxyHandler</span>(<span class="bu">Object</span> proxiedObject) {</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="kw">this</span>.<span class="fu">proxiedObject</span> = proxiedObject;</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">Object</span> <span class="fu">invoke</span>(<span class="bu">Object</span> proxy, <span class="bu">Method</span> method, <span class="bu">Object</span>[] args) <span class="kw">throws</span> <span class="bu">Throwable</span> {</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>      <span class="dt">long</span> startTimestamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>      <span class="bu">Object</span> result = method.<span class="fu">invoke</span>(proxiedObject, args);</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>      <span class="dt">long</span> endTimeStamp = <span class="bu">System</span>.<span class="fu">currentTimeMillis</span>();</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      <span class="dt">long</span> responseTime = endTimeStamp - startTimestamp;</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>      <span class="bu">String</span> apiName = proxiedObject.<span class="fu">getClass</span>().<span class="fu">getName</span>() + <span class="st">&quot;:&quot;</span> + method.<span class="fu">getName</span>();</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>      <span class="bu">RequestInfo</span> requestInfo = <span class="kw">new</span> <span class="bu">RequestInfo</span>(apiName, responseTime, startTimestamp);</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>      metricsCollector.<span class="fu">recordRequest</span>(requestInfo);</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>      <span class="kw">return</span> result;</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="co">//MetricsCollectorProxy&#x4F7F;&#x7528;&#x4E3E;&#x4F8B;</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>MetricsCollectorProxy proxy = <span class="kw">new</span> <span class="fu">MetricsCollectorProxy</span>();</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>IUserController userController = (IUserController) proxy.<span class="fu">createProxy</span>(<span class="kw">new</span> <span class="fu">UserController</span>());</span></code></pre></div>
+<p>Spring AOP &#x5E95;&#x5C42;&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x5C31;&#x662F;&#x57FA;&#x4E8E;&#x52A8;&#x6001;&#x4EE3;&#x7406;&#x3002;</p>
+<h1 id="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x5E94;&#x7528;&#x573A;&#x666F;">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#x5E94;&#x7528;&#x573A;&#x666F;</h1>
+<h2 id="&#x4E1A;&#x52A1;&#x7CFB;&#x7EDF;&#x7684;&#x975E;&#x529F;&#x80FD;&#x6027;&#x9700;&#x6C42;&#x5F00;&#x53D1;">&#x4E1A;&#x52A1;&#x7CFB;&#x7EDF;&#x7684;&#x975E;&#x529F;&#x80FD;&#x6027;&#x9700;&#x6C42;&#x5F00;&#x53D1;</h2>
+<p>&#x6BD4;&#x5982;&#xFF1A;&#x76D1;&#x63A7;&#x3001;&#x7EDF;&#x8BA1;&#x3001;&#x9274;&#x6743;&#x3001;&#x9650;&#x6D41;&#x3001;&#x4E8B;&#x52A1;&#x3001;&#x5E42;&#x7B49;&#x3001;&#x65E5;&#x5FD7;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x8FD9;&#x4E9B;&#x9644;&#x52A0;&#x529F;&#x80FD;&#x4E0E;&#x4E1A;&#x52A1;&#x529F;&#x80FD;&#x89E3;&#x8026;&#xFF0C;&#x653E;&#x5230;&#x4EE3;&#x7406;&#x7C7B;&#x4E2D;&#x7EDF;&#x4E00;&#x5904;&#x7406;&#x3002;</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  桥接模式
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+                原型模式
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Delmore</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

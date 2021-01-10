@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		单例模式 | 
+	 
+	1⃣️3⃣️太狼🐺
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<a id="title" href="/" class="logo">1⃣️3⃣️太狼🐺</a>
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										国际关系
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E5%9B%BD%E9%99%85%E5%85%B3%E7%B3%BB/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E%E4%B8%8B%E5%90%84%E5%9B%BD%E6%8F%B4%E5%8A%A9%E7%9A%84%E8%83%8C%E5%90%8E%E6%98%AF%E5%9B%BD%E9%99%85%E6%94%BF%E6%B2%BB%E5%88%A9%E7%9B%8A/">
+										新冠肺炎下各国援助的背后是国际政治利益
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										分析学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数学分析
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1-极限理论
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-0-%E5%AE%9E%E6%95%B0%E7%B3%BB%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/">
+										1-0-实数系的连续性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-1-%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90/">
+										1-1-函数极限
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-2-%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90/">
+										1-2-数列极限
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-3-%E6%97%A0%E7%A9%B7%E5%B0%8F/">
+										1-3-无穷小
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-4-%E8%BF%9E%E7%BB%AD%E4%B8%8E%E9%97%B4%E6%96%AD/">
+										1-4-连续与间断
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2-微分学
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-1-%E5%AF%BC%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5/">
+										2-1-导数的概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										初等数学
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/%E4%B8%8D%E7%AD%89%E5%BC%8F/">
+										不等式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										计算机
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										操作系统
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/CentOS%E4%B8%AD%E7%9A%84RabbitMQ/">
+										CentOS中的RabbitMQ
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/GitLab%E6%8E%92%E9%94%99/">
+										GitLab排错
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Linux%E6%8C%82%E8%BD%BDWindows%E5%85%B1%E4%BA%AB%E7%9B%98/">
+										Linux挂载Windows共享盘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E7%BD%AE/">
+										防火墙设置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据库
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">
+										MySQL常见操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Redis
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										组成原理
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1. 指令
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-1-%E6%8C%87%E4%BB%A4%E6%A6%82%E8%BF%B0/">
+										1-1-指令概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-2-%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4/">
+										1-2-算数运算指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-3-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%8C%87%E4%BB%A4/">
+										1-3-数据传输指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-4-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4/">
+										1-4-逻辑运算指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-5-%E5%86%B3%E7%AD%96%E6%8C%87%E4%BB%A4/">
+										1-5-决策指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-6-%E8%BF%87%E7%A8%8B%E7%9A%84%E6%89%A7%E8%A1%8C/">
+										1-6-过程的执行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/%E9%99%84-MIPS%E6%8C%87%E4%BB%A4/">
+										附-MIPS指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										软件工程
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										设计模式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1.面向对象
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%85%85%E8%A1%80%E6%A8%A1%E5%9E%8B%E5%92%8C%E8%B4%AB%E8%A1%80%E6%A8%A1%E5%9E%8B/">
+										充血模型和贫血模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%9B%9B%E5%A4%A7%E7%89%B9%E6%80%A7/">
+										四大特性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%9F%BA%E4%BA%8E%E6%8E%A5%E5%8F%A3%E8%80%8C%E9%9D%9E%E5%AE%9E%E7%8E%B0%E7%BC%96%E7%A8%8B/">
+										基于接口而非实现编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B/">
+										面向对象与面向过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2.设计原则
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/DRY%E5%8E%9F%E5%88%99/">
+										DRY原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/KISS%E3%80%81YAGNI%E5%8E%9F%E5%88%99/">
+										KISS、YAGNI原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/LOD%E5%8E%9F%E5%88%99/">
+										LOD原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/SOLID%E5%8E%9F%E5%88%99/">
+										SOLID原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%94%A8%E6%80%A7/">
+										代码复用性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3.规范与重构
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/3.%E8%A7%84%E8%8C%83%E4%B8%8E%E9%87%8D%E6%9E%84/%E9%87%8D%E6%9E%84/">
+										重构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4.创建型设计模式
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down  active">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+										原型模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										建造者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5.结构型设计模式
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">
+										享元模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">
+										代理模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
+										桥接模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">
+										组合模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										装饰器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										适配器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										6.行为型设计模式
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%BC%8F/">
+										中介模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/">
+										模板模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
+										策略模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/">
+										职责链模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										观察者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										迭代器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										软件开发
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										JAVA
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JAVA/%E5%86%85%E7%9C%81/">
+										内省
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										JVM
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JVM/JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">
+										JVM内存结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spring
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/IoC%E5%AE%B9%E5%99%A8/">
+										IoC容器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/%E6%80%BB%E8%A7%88/">
+										总览
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/%E9%85%8D%E7%BD%AE/">
+										配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	单例模式
+</h1>
+<div class="article-meta">
+	
+	<span>Delmore</span>
+	<span>2020-10-20 11:11:59</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;">&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</h1>
+<p>&#x4E00;&#x4E2A;&#x7C7B;&#x53EA;&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF08;&#x6216;&#x8005;&#x5B9E;&#x4F8B;&#xFF09;&#xFF0C;&#x90A3;&#x8FD9;&#x4E2A;&#x7C7B;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x4F8B;&#x7C7B;&#xFF0C;&#x8FD9;&#x79CD;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x5C31;&#x53EB;&#x4F5C;<strong>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</strong>&#xFF08;Singleton Design Pattern&#xFF09;&#x3002;</p>
+<p>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x662F;<strong>&#x8FDB;&#x7A0B;&#x552F;&#x4E00;</strong>&#x7684;&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;&#x65F6;&#x8003;&#x8651;&#x5B89;&#x5168;&#x95EE;&#x9898;">&#x521B;&#x5EFA;&#x65F6;&#x8003;&#x8651;&#x5B89;&#x5168;&#x95EE;&#x9898;</h2>
+<ul>
+<li>&#x6784;&#x9020;&#x51FD;&#x6570;&#x9700;&#x8981;&#x662F; <code>private</code> &#x8BBF;&#x95EE;&#x6743;&#x9650;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x80FD;&#x907F;&#x514D;&#x5916;&#x90E8;&#x901A;&#x8FC7; <code>new</code> &#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#xFF1B;</li>
+<li>&#x8003;&#x8651;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x65F6;&#x7684;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x95EE;&#x9898;&#xFF1B;</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;&#x65F6;&#x8003;&#x8651;&#x6027;&#x80FD;&#x95EE;&#x9898;">&#x4F7F;&#x7528;&#x65F6;&#x8003;&#x8651;&#x6027;&#x80FD;&#x95EE;&#x9898;</h2>
+<ul>
+<li><p>&#x8003;&#x8651;&#x662F;&#x5426;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#xFF1B;</p>
+<blockquote>
+<p>&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#xFF1A;&#x771F;&#x6B63;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x624D;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;</p>
+</blockquote></li>
+<li><p>&#x8003;&#x8651; <code>getInstance()</code> &#x6027;&#x80FD;&#x662F;&#x5426;&#x9AD8;&#xFF08;&#x662F;&#x5426;&#x52A0;&#x9501;&#xFF09;&#x3002;</p></li>
+</ul>
+<h2 id="&#x997F;&#x6C49;&#x5F0F;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#x6700;&#x7B80;&#x5355;&#x4F46;&#x4E0D;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;">&#x997F;&#x6C49;&#x5F0F;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#x6700;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x4E0D;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;</h2>
+<p>&#x5728;&#x7C7B;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#xFF0C;instance &#x9759;&#x6001;&#x5B9E;&#x4F8B;&#x5C31;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x597D;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;instance &#x5B9E;&#x4F8B;&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E0D;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x3002;</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator { </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> IdGenerator instance = <span class="kw">new</span> <span class="fu">IdGenerator</span>();</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<blockquote>
+<ul>
+<li>&#x82E5;&#x521D;&#x59CB;&#x5316;&#x8017;&#x65F6;&#x957F;&#xFF0C;&#x63D0;&#x524D;&#x5230;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x5B8C;&#x6210;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x907F;&#x514D;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x518D;&#x53BB;&#x521D;&#x59CB;&#x5316;&#x5BFC;&#x81F4;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x82E5;&#x5B9E;&#x4F8B;&#x5360;&#x7528;&#x8D44;&#x6E90;&#x591A;&#xFF0C;&#x6709;&#x95EE;&#x9898;&#x53CA;&#x65E9;&#x66B4;&#x9732;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x62A5;&#x9519;&#xFF0C;&#x53EF;&#x4EE5;&#x7ACB;&#x5373;&#x53BB;&#x4FEE;&#x590D;&#x3002;&#x907F;&#x514D;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#xFF0C;&#x7A81;&#x7136;&#x56E0;&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x5360;&#x7528;&#x8D44;&#x6E90;&#x8FC7;&#x591A;&#xFF0C;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x5D29;&#x6E83;&#xFF0C;&#x5F71;&#x54CD;&#x7CFB;&#x7EDF;&#x7684;&#x53EF;&#x7528;&#x6027;&#x3002;</li>
+</ul>
+</blockquote>
+<h2 id="&#x61D2;&#x6C49;&#x5F0F;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x4F46;&#x5E76;&#x53D1;&#x5EA6;&#x4F4E;">&#x61D2;&#x6C49;&#x5F0F;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#xFF0C;&#x4F46;&#x5E76;&#x53D1;&#x5EA6;&#x4F4E;</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator { </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> IdGenerator instance;</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="kw">synchronized</span> IdGenerator <span class="fu">getInstance</span>() {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (instance == <span class="kw">null</span>) {</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      instance = <span class="kw">new</span> <span class="fu">IdGenerator</span>();</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<blockquote>
+<p>&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5355;&#x4F8B;&#x7C7B;&#x5076;&#x5C14;&#x4F1A;&#x88AB;&#x7528;&#x5230;&#xFF0C;&#x90A3;&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x8FD8;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x3002;&#x4F46;&#x662F;&#xFF0C;<strong>&#x5982;&#x679C;&#x9891;&#x7E41;&#x5730;&#x7528;&#x5230;&#xFF0C;&#x90A3;&#x9891;&#x7E41;&#x52A0;&#x9501;&#x3001;&#x91CA;&#x653E;&#x9501;&#x53CA;&#x5E76;&#x53D1;&#x5EA6;&#x4F4E;&#x7B49;&#x95EE;&#x9898;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x6027;&#x80FD;&#x74F6;&#x9888;&#xFF0C;&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5C31;&#x4E0D;&#x53EF;&#x53D6;&#x4E86;</strong>&#x3002;</p>
+</blockquote>
+<h2 id="&#x53CC;&#x91CD;&#x68C0;&#x6D4B;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x65E2;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x53C8;&#x652F;&#x6301;&#x9AD8;&#x5E76;&#x53D1;">&#x53CC;&#x91CD;&#x68C0;&#x6D4B;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x65E2;&#x652F;&#x6301;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#xFF0C;&#x53C8;&#x652F;&#x6301;&#x9AD8;&#x5E76;&#x53D1;</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator { </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> IdGenerator instance;</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (instance == <span class="kw">null</span>) {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">synchronized</span>(IdGenerator.<span class="fu">class</span>) { <span class="co">// &#x6B64;&#x5904;&#x4E3A;&#x7C7B;&#x7EA7;&#x522B;&#x7684;&#x9501;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> (instance == <span class="kw">null</span>) {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>          instance = <span class="kw">new</span> <span class="fu">IdGenerator</span>();</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<blockquote>
+<p>&#x53EA;&#x8981; instance &#x88AB;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#xFF0C;&#x5373;&#x4FBF;&#x518D;&#x8C03;&#x7528; <code>getInstance()</code> &#x51FD;&#x6570;&#x4E5F;&#x4E0D;&#x4F1A;&#x518D;&#x8FDB;&#x5165;&#x5230;&#x52A0;&#x9501;&#x903B;&#x8F91;&#x4E2D;&#x4E86;&#x3002;</p>
+</blockquote>
+<h2 id="&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#x65B9;&#x5F0F;&#x7C7B;&#x4F3C;&#x997F;&#x6C49;&#x5F0F;&#x4F46;&#x53C8;&#x80FD;&#x505A;&#x5230;&#x4E86;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;">&#x9759;&#x6001;&#x5185;&#x90E8;&#x7C7B;&#x65B9;&#x5F0F;&#x7C7B;&#x4F3C;&#x997F;&#x6C49;&#x5F0F;&#xFF0C;&#x4F46;&#x53C8;&#x80FD;&#x505A;&#x5230;&#x4E86;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator { </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="kw">class</span> SingletonHolder{</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> IdGenerator instance = <span class="kw">new</span> <span class="fu">IdGenerator</span>();</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() {</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> SingletonHolder.<span class="fu">instance</span>;</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>&#x5F53;&#x5916;&#x90E8;&#x7C7B; <code>IdGenerator</code> &#x88AB;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x521B;&#x5EFA; <code>SingletonHolder</code> &#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x3002;&#x53EA;&#x6709;&#x5F53;&#x8C03;&#x7528; <code>getInstance()</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;<code>SingletonHolder</code> &#x624D;&#x4F1A;&#x88AB;&#x52A0;&#x8F7D;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x521B;&#x5EFA; instance&#x3002;</p>
+<blockquote>
+<p>instance &#x7684;&#x552F;&#x4E00;&#x6027;&#x3001;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#x7684;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x90FD;&#x7531; JVM &#x6765;&#x4FDD;&#x8BC1;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;&#x65E2;&#x4FDD;&#x8BC1;&#x4E86;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#xFF0C;&#x53C8;&#x80FD;&#x505A;&#x5230;&#x5EF6;&#x8FDF;&#x52A0;&#x8F7D;&#x3002;</p>
+</blockquote>
+<h1 id="&#x4F7F;&#x7528;&#x573A;&#x666F;&#x5904;&#x7406;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#x51B2;&#x7A81;">&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x5904;&#x7406;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#x51B2;&#x7A81;</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Logger</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">FileWriter</span> writer;</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="bu">Logger</span>() {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">File</span> file = <span class="kw">new</span> <span class="bu">File</span>(<span class="st">&quot;/Users/wangzheng/log.txt&quot;</span>);</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    writer = <span class="kw">new</span> <span class="bu">FileWriter</span>(file, <span class="kw">true</span>);</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span>(<span class="bu">String</span> message) {</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    writer.<span class="fu">write</span>(mesasge);</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x4E92;&#x76F8;&#x8986;&#x76D6;">&#x7EBF;&#x7A0B;&#x4E0D;&#x5B89;&#x5168;&#xFF0C;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x4E92;&#x76F8;&#x8986;&#x76D6;</h2>
+<p>&#x5728; Web &#x5BB9;&#x5668;&#x7684; Servlet &#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A; Servlet &#x7EBF;&#x7A0B;&#x540C;&#x65F6;&#x5206;&#x522B;&#x6267;&#x884C; <code>login()</code> &#x548C; <code>create()</code> &#x4E24;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x540C;&#x65F6;&#x5199;&#x65E5;&#x5FD7;&#x5230; log.txt &#x6587;&#x4EF6;&#x4E2D;&#xFF0C; &#x90A3;&#x5C31;&#x6709;&#x53EF;&#x80FD;&#x5B58;&#x5728;<strong>&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x4E92;&#x76F8;&#x8986;&#x76D6;</strong>&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p><img src="https://technotetech.oss-cn-shenzhen.aliyuncs.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2b0e6141d10399430c59169af4edc3c2.jpg"></p>
+<h2 id="&#x52A0;&#x5BF9;&#x8C61;&#x9501;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;">&#x52A0;&#x5BF9;&#x8C61;&#x9501;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;</h2>
+<p>&#x901A;&#x8FC7;&#x52A0;&#x5BF9;&#x8C61;&#x9501; <code>synchronized(this)</code> &#x7684;&#x65B9;&#x5F0F;&#x5E76;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;&#xFF1A;</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span>(<span class="bu">String</span> message) {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">synchronized</span>(<span class="kw">this</span>) {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      writer.<span class="fu">write</span>(mesasge);</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>...</span></code></pre></div>
+<ul>
+<li><p>&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x5E76;&#x4E0D;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x628A;&#x9501;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x9501;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7EA7;&#x522B;&#x7684;&#x9501;&#xFF0C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x7EBF;&#x7A0B;&#x4E0B;&#x540C;&#x65F6;&#x8C03;&#x7528; <code>log()</code> &#x51FD;&#x6570;&#xFF0C;&#x4F1A;&#x88AB;&#x5F3A;&#x5236;&#x8981;&#x6C42;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x3002;&#x4F46;&#x662F;&#xFF0C;<strong>&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x5E76;&#x4E0D;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x628A;&#x9501;</strong>&#x3002;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x7EBF;&#x7A0B;&#x4E0B;&#xFF0C;&#x901A;&#x8FC7;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x6267;&#x884C; <code>log()</code> &#x51FD;&#x6570;&#xFF0C;&#x9501;&#x5E76;&#x4E0D;&#x4F1A;&#x8D77;&#x4F5C;&#x7528;&#xFF0C;&#x4ECD;&#x7136;&#x6709;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x5199;&#x5165;&#x65E5;&#x5FD7;&#x4E92;&#x76F8;&#x8986;&#x76D6;&#x7684;&#x95EE;&#x9898;&#x3002;</p></li>
+</ul>
+<p><img src="https://technotetech.oss-cn-shenzhen.aliyuncs.com/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/203eb5070c3820b48500d4ab95732f29.jpg"></p>
+<ul>
+<li><p><code>FileWriter</code>&#x672C;&#x8EAB;&#x5C31;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x3002;</p>
+<p>&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x4E2D;&#x672C;&#x8EAB;&#x5C31;&#x52A0;&#x4E86;&#x5BF9;&#x8C61;&#x7EA7;&#x522B;&#x7684;&#x9501;&#xFF0C;<strong>&#x4E0D;&#x540C;&#x7684; <code>Logger</code> &#x5BF9;&#x8C61;&#x4E0D;&#x5171;&#x4EAB; <code>FileWriter</code> &#x5BF9;&#x8C61;</strong>&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;<code>FileWriter</code> &#x5BF9;&#x8C61;&#x7EA7;&#x522B;&#x7684;&#x9501;&#x4E5F;&#x89E3;&#x51B3;&#x4E0D;&#x4E86;&#x6570;&#x636E;&#x5199;&#x5165;&#x4E92;&#x76F8;&#x8986;&#x76D6;&#x7684;&#x95EE;&#x9898;&#x3002;</p></li>
+</ul>
+<h2 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x95EE;&#x9898;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x89E3;&#x51B3;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x95EE;&#x9898;</h2>
+<p>&#x53EA;&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>Logger</code> &#x5BF9;&#x8C61;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x4F7F;&#x7528;&#x7684;&#x8FD9;&#x4E00;&#x4E2A; <code>Logger</code> &#x5BF9;&#x8C61;&#xFF0C;&#x5171;&#x4EAB;&#x4E00;&#x4E2A; <code>FileWriter</code> &#x5BF9;&#x8C61;&#xFF0C;&#x800C; <code>FileWriter</code> &#x672C;&#x8EAB;&#x662F;&#x5BF9;&#x8C61;&#x7EA7;&#x522B;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x907F;&#x514D;&#x4E86;&#x591A;&#x7EBF;&#x7A0B;&#x60C5;&#x51B5;&#x4E0B;&#x5199;&#x65E5;&#x5FD7;&#x4F1A;&#x4E92;&#x76F8;&#x8986;&#x76D6;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> <span class="bu">Logger</span> {</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">FileWriter</span> writer;</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Logger</span> instance = <span class="kw">new</span> <span class="bu">Logger</span>();</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Logger</span>() {</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">File</span> file = <span class="kw">new</span> <span class="bu">File</span>(<span class="st">&quot;/Users/wangzheng/log.txt&quot;</span>);</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    writer = <span class="kw">new</span> <span class="bu">FileWriter</span>(file, <span class="kw">true</span>);</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="bu">Logger</span> <span class="fu">getInstance</span>() {</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span>(<span class="bu">String</span> message) {</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    writer.<span class="fu">write</span>(mesasge);</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="&#x52A0;&#x7C7B;&#x7EA7;&#x522B;&#x7684;&#x9501;&#x4E5F;&#x80FD;&#x89E3;&#x51B3;">&#x52A0;&#x7C7B;&#x7EA7;&#x522B;&#x7684;&#x9501;&#x4E5F;&#x80FD;&#x89E3;&#x51B3;</h2>
+<p>&#x8BA9;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x90FD;<strong>&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x628A;&#x9501;</strong>&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x907F;&#x514D;&#x4E86;&#x4E0D;&#x540C;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x540C;&#x65F6;&#x8C03;&#x7528; <code>log()</code> &#x51FD;&#x6570;&#xFF0C;&#x800C;&#x5BFC;&#x81F4;&#x7684;&#x65E5;&#x5FD7;&#x8986;&#x76D6;&#x95EE;&#x9898;&#x3002;</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>...</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">log</span>(<span class="bu">String</span> message) {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">synchronized</span>(<span class="bu">Logger</span>.<span class="fu">class</span>) {</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>      writer.<span class="fu">write</span>(mesasge);</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>...</span></code></pre></div>
+<h2 id="&#x5176;&#x4ED6;&#x89E3;&#x51B3;&#x65B9;&#x5F0F;">&#x5176;&#x4ED6;&#x89E3;&#x51B3;&#x65B9;&#x5F0F;</h2>
+<ul>
+<li><p>&#x5206;&#x5E03;&#x5F0F;&#x9501;</p>
+<p>&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x5B89;&#x5168;&#x53EF;&#x9760;&#x3001;&#x65E0; bug&#x3001;&#x9AD8;&#x6027;&#x80FD;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x9501;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x4EF6;&#x5BB9;&#x6613;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p></li>
+<li><p>&#x5E76;&#x53D1;&#x961F;&#x5217;</p>
+<p>&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x540C;&#x65F6;&#x5F80;&#x5E76;&#x53D1;&#x961F;&#x5217;&#x91CC;&#x5199;&#x65E5;&#x5FD7;&#xFF0C;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7EBF;&#x7A0B;&#x8D1F;&#x8D23;&#x5C06;&#x5E76;&#x53D1;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5199;&#x5165;&#x5230;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x8D77;&#x6765;&#x4E5F;&#x7A0D;&#x5FAE;&#x6709;&#x70B9;&#x590D;&#x6742;&#x3002;</p></li>
+</ul>
+<h1 id="&#x4F7F;&#x7528;&#x573A;&#x666F;&#x6570;&#x636E;&#x5728;&#x7CFB;&#x7EDF;&#x4E2D;&#x53EA;&#x5E94;&#x4FDD;&#x5B58;&#x4E00;&#x4EFD;&#x7684;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7C7B;">&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x6570;&#x636E;&#x5728;&#x7CFB;&#x7EDF;&#x4E2D;&#x53EA;&#x5E94;&#x4FDD;&#x5B58;&#x4E00;&#x4EFD;&#x7684;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x7C7B;</h1>
+<ul>
+<li><p>&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x7C7B;&#x3002;</p>
+<p>&#x5728;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5F53;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#x4E4B;&#x540E;&#xFF0C;&#x4EE5;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x5728;&#xFF0C;&#x4E5F;&#x7406;&#x6240;&#x5E94;&#x5F53;&#x53EA;&#x6709;&#x4E00;&#x4EFD;&#x3002;</p></li>
+<li><p>&#x552F;&#x4E00;&#x9012;&#x589E; ID &#x53F7;&#x7801;&#x751F;&#x6210;&#x5668;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x7A0B;&#x5E8F;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x5C31;&#x4F1A;&#x5B58;&#x5728;&#x751F;&#x6210;&#x91CD;&#x590D; ID &#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5C06; ID &#x751F;&#x6210;&#x5668;&#x7C7B;&#x8BBE;&#x8BA1;&#x4E3A;&#x5355;&#x4F8B;&#x3002;</p></li>
+</ul>
+<h1 id="&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x95EE;&#x9898;&#x591A;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x53CD;&#x6A21;&#x5F0F;">&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x95EE;&#x9898;&#x591A;&#xFF0C;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x53CD;&#x6A21;&#x5F0F;</h1>
+<h2 id="&#x5355;&#x4F8B;&#x5BF9;-oop-&#x7279;&#x6027;&#x7684;&#x652F;&#x6301;&#x4E0D;&#x53CB;&#x597D;">&#x5355;&#x4F8B;&#x5BF9; OOP &#x7279;&#x6027;&#x7684;&#x652F;&#x6301;&#x4E0D;&#x53CB;&#x597D;</h2>
+<h3 id="&#x5355;&#x4F8B;&#x8FDD;&#x80CC;&#x4E86;&#x62BD;&#x8C61;&#x7279;&#x6027;">&#x5355;&#x4F8B;&#x8FDD;&#x80CC;&#x4E86;&#x62BD;&#x8C61;&#x7279;&#x6027;</h3>
+<p><code>IdGenerator.getInstance().getId();</code> &#x8FDD;&#x80CC;&#x4E86;&#x57FA;&#x4E8E;&#x63A5;&#x53E3;&#x800C;&#x975E;&#x5B9E;&#x73B0;&#x7684;&#x8BBE;&#x8BA1;&#x539F;&#x5219;&#xFF0C;&#x4E5F;&#x5C31;&#x8FDD;&#x80CC;&#x4E86;&#x5E7F;&#x4E49;&#x4E0A;&#x7406;&#x89E3;&#x7684; OOP &#x7684;<strong>&#x62BD;&#x8C61;&#x7279;&#x6027;</strong>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x672A;&#x6765;&#x67D0;&#x4E00;&#x5929;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x4E1A;&#x52A1;&#x91C7;&#x7528;&#x4E0D;&#x540C;&#x7684; ID &#x751F;&#x6210;&#x7B97;&#x6CD5;&#x3002; &#x6BD4;&#x5982;&#xFF0C;&#x8BA2;&#x5355; ID &#x548C;&#x7528;&#x6237; ID &#x91C7;&#x7528;&#x4E0D;&#x540C;&#x7684; ID &#x751F;&#x6210;&#x5668;&#x6765;&#x751F;&#x6210;&#x3002; &#x4E3A;&#x4E86;&#x5E94;&#x5BF9;&#x8FD9;&#x4E2A;&#x9700;&#x6C42;&#x53D8;&#x5316;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x6240;&#x6709;&#x7528;&#x5230; <code>IdGenerator</code> &#x7C7B;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x8FD9;&#x6837;&#x4EE3;&#x7801;&#x7684;&#x6539;&#x52A8;&#x5C31;&#x4F1A;&#x6BD4;&#x8F83;&#x5927;&#x3002;</p>
+<h3 id="&#x5355;&#x4F8B;&#x5BF9;&#x7EE7;&#x627F;&#x591A;&#x6001;&#x7279;&#x6027;&#x7684;&#x652F;&#x6301;&#x4E0D;&#x53CB;&#x597D;">&#x5355;&#x4F8B;&#x5BF9;&#x7EE7;&#x627F;&#x3001;&#x591A;&#x6001;&#x7279;&#x6027;&#x7684;&#x652F;&#x6301;&#x4E0D;&#x53CB;&#x597D;</h3>
+<p>&#x5355;&#x4F8B;&#x7C7B;&#x5B9E;&#x73B0;&#x7EE7;&#x627F;&#x3001;&#x591A;&#x6001;&#xFF0C;&#x4F1A;&#x975E;&#x5E38;&#x5947;&#x602A;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x53D8;&#x5DEE;&#x3002; &#x4E0D;&#x660E;&#x767D;&#x8BBE;&#x8BA1;&#x610F;&#x56FE;&#x7684;&#x4EBA;&#xFF0C;&#x770B;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x4F1A;&#x89C9;&#x5F97;&#x83AB;&#x540D;&#x5176;&#x5999;&#x3002; &#x6240;&#x4EE5;&#xFF0C;&#x4E00;&#x65E6;&#x4F60;&#x9009;&#x62E9;&#x5C06;&#x67D0;&#x4E2A;&#x7C7B;&#x8BBE;&#x8BA1;&#x6210;&#x5230;&#x5355;&#x4F8B;&#x7C7B;&#xFF0C;&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;&#x653E;&#x5F03;&#x4E86;&#x7EE7;&#x627F;&#x548C;&#x591A;&#x6001;&#x8FD9;&#x4E24;&#x4E2A;&#x5F3A;&#x6709;&#x529B;&#x7684;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7279;&#x6027;&#xFF0C;&#x4E5F;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x635F;&#x5931;&#x4E86;&#x53EF;&#x4EE5;&#x5E94;&#x5BF9;&#x672A;&#x6765;&#x9700;&#x6C42;&#x53D8;&#x5316;&#x7684;&#x6269;&#x5C55;&#x6027;&#x3002;</p>
+<h2 id="&#x5355;&#x4F8B;&#x4F1A;&#x9690;&#x85CF;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;">&#x5355;&#x4F8B;&#x4F1A;&#x9690;&#x85CF;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;</h2>
+<p>&#x5355;&#x4F8B;&#x7C7B;&#x4E0D;&#x9700;&#x8981;&#x663E;&#x793A;&#x521B;&#x5EFA;&#x3001;&#x4E0D;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x53C2;&#x6570;&#x4F20;&#x9012;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x5982;&#x679C;&#x4EE3;&#x7801;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x8FD9;&#x79CD;&#x8C03;&#x7528;&#x5173;&#x7CFB;&#x5C31;&#x4F1A;&#x975E;&#x5E38;&#x9690;&#x853D;&#x3002; &#x5728;&#x9605;&#x8BFB;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x4ED4;&#x7EC6;&#x67E5;&#x770B;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF0C;&#x624D;&#x80FD;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x7C7B;&#x5230;&#x5E95;&#x4F9D;&#x8D56;&#x4E86;&#x54EA;&#x4E9B;&#x5355;&#x4F8B;&#x7C7B;&#x3002;</p>
+<h2 id="&#x5355;&#x4F8B;&#x5BF9;&#x4EE3;&#x7801;&#x7684;&#x6269;&#x5C55;&#x6027;&#x4E0D;&#x53CB;&#x597D;">&#x5355;&#x4F8B;&#x5BF9;&#x4EE3;&#x7801;&#x7684;&#x6269;&#x5C55;&#x6027;&#x4E0D;&#x53CB;&#x597D;</h2>
+<p>&#x6211;&#x4EEC;&#x5728;&#x7CFB;&#x7EDF;&#x4E2D;&#x521B;&#x5EFA;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6C60;&#xFF0C;&#x6162; SQL &#x72EC;&#x4EAB;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6C60;&#xFF0C; &#x5176;&#x4ED6; SQL &#x72EC;&#x4EAB;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6C60;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x907F;&#x514D;&#x6162; SQL &#x5F71;&#x54CD;&#x5230;&#x5176;&#x4ED6; SQL &#x7684;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5C06;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6C60;&#x8BBE;&#x8BA1;&#x6210;&#x5355;&#x4F8B;&#x7C7B;&#xFF0C;&#x663E;&#x7136;&#x5C31;&#x65E0;&#x6CD5;&#x9002;&#x5E94;&#x8FD9;&#x6837;&#x7684;&#x9700;&#x6C42;&#x53D8;&#x66F4;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6C60;&#x3001;&#x7EBF;&#x7A0B;&#x6C60;&#x8FD9;&#x7C7B;&#x7684;&#x8D44;&#x6E90;&#x6C60;&#xFF0C;&#x6700;&#x597D;&#x8FD8;&#x662F;&#x4E0D;&#x8981;&#x8BBE;&#x8BA1;&#x6210;&#x5355;&#x4F8B;&#x7C7B;&#x3002;</p>
+<h2 id="&#x5355;&#x4F8B;&#x5BF9;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x6D4B;&#x8BD5;&#x6027;&#x4E0D;&#x53CB;&#x597D;">&#x5355;&#x4F8B;&#x5BF9;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x6D4B;&#x8BD5;&#x6027;&#x4E0D;&#x53CB;&#x597D;</h2>
+<p>&#x5355;&#x4F8B;&#x6A21;&#x5F0F;&#x7684;&#x4F7F;&#x7528;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x6D4B;&#x8BD5;&#x6027;&#x3002; &#x5982;&#x679C;&#x5355;&#x4F8B;&#x7C7B;&#x4F9D;&#x8D56;&#x6BD4;&#x8F83;&#x91CD;&#x7684;&#x5916;&#x90E8;&#x8D44;&#x6E90;&#xFF0C;&#x6BD4;&#x5982; DB&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x5199;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5E0C;&#x671B;&#x80FD;&#x901A;&#x8FC7; mock &#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x5B83;&#x66FF;&#x6362;&#x6389;&#x3002; &#x800C;&#x5355;&#x4F8B;&#x7C7B;&#x8FD9;&#x79CD;&#x786C;&#x7F16;&#x7801;&#x5F0F;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x5BFC;&#x81F4;&#x65E0;&#x6CD5;&#x5B9E;&#x73B0; mock &#x66FF;&#x6362;&#x3002;</p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x5355;&#x4F8B;&#x7C7B;&#x6301;&#x6709;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF08;&#x6BD4;&#x5982; <code>IdGenerator</code> &#x4E2D;&#x7684; <code>id</code> &#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF09;&#xFF0C; &#x90A3;&#x5B83;&#x5B9E;&#x9645;&#x4E0A;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x79CD;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x88AB;&#x6240;&#x6709;&#x7684;&#x4EE3;&#x7801;&#x5171;&#x4EAB;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x53D8;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x662F;&#x53EF;&#x4EE5;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#xFF0C; &#x90A3;&#x6211;&#x4EEC;&#x5728;&#x7F16;&#x5199;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x4E0D;&#x540C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x4E4B;&#x95F4;&#xFF0C;&#x4FEE;&#x6539;&#x4E86;&#x5355;&#x4F8B;&#x7C7B;&#x4E2D;&#x7684;&#x540C;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x4E92;&#x76F8;&#x5F71;&#x54CD;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="&#x5355;&#x4F8B;&#x4E0D;&#x652F;&#x6301;&#x6709;&#x53C2;&#x6570;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;">&#x5355;&#x4F8B;&#x4E0D;&#x652F;&#x6301;&#x6709;&#x53C2;&#x6570;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</h2>
+<h1 id="&#x5355;&#x4F8B;&#x7C7B;&#x5728;&#x4E0D;&#x540C;&#x8303;&#x56F4;&#x5185;&#x5176;&#x552F;&#x4E00;&#x6027;&#x4E0D;&#x540C;">&#x5355;&#x4F8B;&#x7C7B;&#x5728;&#x4E0D;&#x540C;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x5176;&#x552F;&#x4E00;&#x6027;&#x4E0D;&#x540C;</h1>
+<h2 id="&#x666E;&#x901A;&#x7684;&#x5355;&#x4F8B;&#x7C7B;&#x662F;&#x8FDB;&#x7A0B;&#x552F;&#x4E00;&#x7684;">&#x666E;&#x901A;&#x7684;&#x5355;&#x4F8B;&#x7C7B;&#x662F;&#x8FDB;&#x7A0B;&#x552F;&#x4E00;&#x7684;</h2>
+<p>&#x5355;&#x4F8B;&#x7C7B;&#x4E2D;&#x5BF9;&#x8C61;&#x7684;&#x552F;&#x4E00;&#x6027;&#x7684;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#x662F;&#x8FDB;&#x7A0B;&#x5185;&#x7684;&#xFF0C;&#x5728;&#x8FDB;&#x7A0B;&#x95F4;&#x662F;&#x4E0D;&#x552F;&#x4E00;&#x7684;&#x3002;</p>
+<h2 id="&#x7EBF;&#x7A0B;&#x552F;&#x4E00;&#x7684;&#x5355;&#x4F8B;&#x7C7B;">&#x7EBF;&#x7A0B;&#x552F;&#x4E00;&#x7684;&#x5355;&#x4F8B;&#x7C7B;</h2>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x4E2A; <code>HashMap</code> &#x6765;&#x5B58;&#x50A8;&#x5BF9;&#x8C61;&#xFF0C;&#x5176;&#x4E2D; <code>key</code> &#x662F;&#x7EBF;&#x7A0B; ID&#xFF0C;<code>value</code> &#x662F;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#xFF0C;<strong>&#x4E0D;&#x540C;&#x7684;&#x7EBF;&#x7A0B;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x53EA;&#x80FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</strong>&#x3002;</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator {</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">ConcurrentHashMap</span>&lt;<span class="bu">Long</span>, IdGenerator&gt; instances = <span class="kw">new</span> <span class="bu">ConcurrentHashMap</span>&lt;&gt;();</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() {</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Long</span> currentThreadId = <span class="bu">Thread</span>.<span class="fu">currentThread</span>().<span class="fu">getId</span>();</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    instances.<span class="fu">putIfAbsent</span>(currentThreadId, <span class="kw">new</span> <span class="fu">IdGenerator</span>());</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instances.<span class="fu">get</span>(currentThreadId);</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() {</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="&#x5206;&#x5E03;&#x5F0F;&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5355;&#x4F8B;">&#x5206;&#x5E03;&#x5F0F;&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x5355;&#x4F8B;</h2>
+<p><strong>&#x96C6;&#x7FA4;&#x552F;&#x4E00;</strong>&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x8FDB;&#x7A0B;&#x5185;&#x552F;&#x4E00;&#x3001;&#x8FDB;&#x7A0B;&#x95F4;&#x4E5F;&#x552F;&#x4E00;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#x95F4;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x80FD;&#x521B;&#x5EFA;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x628A;&#x8FD9;&#x4E2A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x5E8F;&#x5217;&#x5316;&#x5E76;&#x5B58;&#x50A8;&#x5230;&#x5916;&#x90E8;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x533A;&#xFF08;&#x6BD4;&#x5982;&#x6587;&#x4EF6;&#xFF09;&#x3002; &#x8FDB;&#x7A0B;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5355;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x4ECE;&#x5916;&#x90E8;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x533A;&#x4E2D;&#x5C06;&#x5B83;&#x8BFB;&#x53D6;&#x5230;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x6210;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4F7F;&#x7528;&#xFF0C;&#x4F7F;&#x7528;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x8FD8;&#x9700;&#x8981;&#x518D;&#x5B58;&#x50A8;&#x56DE;&#x5916;&#x90E8;&#x5171;&#x4EAB;&#x5B58;&#x50A8;&#x533A;&#x3002;</p>
+<blockquote>
+<p>&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x4EFB;&#x4F55;&#x65F6;&#x523B;&#xFF0C;&#x5728;&#x8FDB;&#x7A0B;&#x95F4;&#x90FD;&#x53EA;&#x6709;&#x4E00;&#x4EFD;&#x5BF9;&#x8C61;&#x5B58;&#x5728;&#xFF0C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x5728;&#x83B7;&#x53D6;&#x5230;&#x5BF9;&#x8C61;&#x4E4B;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x5BF9;&#x8C61;&#x52A0;&#x9501;&#xFF0C;&#x907F;&#x514D;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x518D;&#x5C06;&#x5176;&#x83B7;&#x53D6;&#x3002;&#x5728;&#x8FDB;&#x7A0B;&#x4F7F;&#x7528;&#x5B8C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x5730;&#x5C06;&#x5BF9;&#x8C61;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x5220;&#x9664;&#xFF0C;&#x5E76;&#x4E14;&#x91CA;&#x653E;&#x5BF9;&#x5BF9;&#x8C61;&#x7684;&#x52A0;&#x9501;&#x3002;</p>
+</blockquote>
+<div class="sourceCode" id="cb10"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> IdGenerator {</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">AtomicLong</span> id = <span class="kw">new</span> <span class="bu">AtomicLong</span>(<span class="dv">0</span>);</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> IdGenerator instance;</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> SharedObjectStorage storage = <span class="fu">FileSharedObjectStorage</span>(<span class="co">/*&#x5165;&#x53C2;&#x7701;&#x7565;&#xFF0C;&#x6BD4;&#x5982;&#x6587;&#x4EF6;&#x5730;&#x5740;*/</span>);</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> DistributedLock lock = <span class="kw">new</span> <span class="fu">DistributedLock</span>();</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="fu">IdGenerator</span>() {}</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="kw">synchronized</span> <span class="dt">static</span> IdGenerator <span class="fu">getInstance</span>() </span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (instance == <span class="kw">null</span>) {</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      lock.<span class="fu">lock</span>();</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>      instance = storage.<span class="fu">load</span>(IdGenerator.<span class="fu">class</span>);</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> instance;</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> synchroinzed <span class="dt">void</span> <span class="fu">freeInstance</span>() {</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    storage.<span class="fu">save</span>(<span class="kw">this</span>, IdGeneator.<span class="fu">class</span>);</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    instance = <span class="kw">null</span>; <span class="co">//&#x91CA;&#x653E;&#x5BF9;&#x8C61;</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    lock.<span class="fu">unlock</span>();</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">long</span> <span class="fu">getId</span>() { </span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> id.<span class="fu">incrementAndGet</span>();</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co">// IdGenerator&#x4F7F;&#x7528;&#x4E3E;&#x4F8B;</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>IdGenerator idGeneator = IdGenerator.<span class="fu">getInstance</span>();</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="dt">long</span> id = idGenerator.<span class="fu">getId</span>();</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>IdGenerator.<span class="fu">freeInstance</span>();</span></code></pre></div>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E7%BD%AE/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JVM/JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">
+                
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Delmore</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

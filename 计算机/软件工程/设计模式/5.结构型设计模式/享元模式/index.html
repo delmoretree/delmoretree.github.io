@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		享元模式 | 
+	 
+	1⃣️3⃣️太狼🐺
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<a id="title" href="/" class="logo">1⃣️3⃣️太狼🐺</a>
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										国际关系
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E5%9B%BD%E9%99%85%E5%85%B3%E7%B3%BB/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E%E4%B8%8B%E5%90%84%E5%9B%BD%E6%8F%B4%E5%8A%A9%E7%9A%84%E8%83%8C%E5%90%8E%E6%98%AF%E5%9B%BD%E9%99%85%E6%94%BF%E6%B2%BB%E5%88%A9%E7%9B%8A/">
+										新冠肺炎下各国援助的背后是国际政治利益
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										分析学
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数学分析
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1-极限理论
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-0-%E5%AE%9E%E6%95%B0%E7%B3%BB%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/">
+										1-0-实数系的连续性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-1-%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90/">
+										1-1-函数极限
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-2-%E6%95%B0%E5%88%97%E6%9E%81%E9%99%90/">
+										1-2-数列极限
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-3-%E6%97%A0%E7%A9%B7%E5%B0%8F/">
+										1-3-无穷小
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/1-%E6%9E%81%E9%99%90%E7%90%86%E8%AE%BA/1-4-%E8%BF%9E%E7%BB%AD%E4%B8%8E%E9%97%B4%E6%96%AD/">
+										1-4-连续与间断
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2-微分学
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-1-%E5%AF%BC%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5/">
+										2-1-导数的概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										初等数学
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/%E4%B8%8D%E7%AD%89%E5%BC%8F/">
+										不等式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										计算机
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										操作系统
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/CentOS%E4%B8%AD%E7%9A%84RabbitMQ/">
+										CentOS中的RabbitMQ
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/GitLab%E6%8E%92%E9%94%99/">
+										GitLab排错
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Linux%E6%8C%82%E8%BD%BDWindows%E5%85%B1%E4%BA%AB%E7%9B%98/">
+										Linux挂载Windows共享盘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E7%BD%AE/">
+										防火墙设置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据库
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">
+										MySQL常见操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Redis
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										组成原理
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1. 指令
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-1-%E6%8C%87%E4%BB%A4%E6%A6%82%E8%BF%B0/">
+										1-1-指令概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-2-%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4/">
+										1-2-算数运算指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-3-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E6%8C%87%E4%BB%A4/">
+										1-3-数据传输指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-4-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E6%8C%87%E4%BB%A4/">
+										1-4-逻辑运算指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-5-%E5%86%B3%E7%AD%96%E6%8C%87%E4%BB%A4/">
+										1-5-决策指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-6-%E8%BF%87%E7%A8%8B%E7%9A%84%E6%89%A7%E8%A1%8C/">
+										1-6-过程的执行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/%E9%99%84-MIPS%E6%8C%87%E4%BB%A4/">
+										附-MIPS指令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										软件工程
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										设计模式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1.面向对象
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%85%85%E8%A1%80%E6%A8%A1%E5%9E%8B%E5%92%8C%E8%B4%AB%E8%A1%80%E6%A8%A1%E5%9E%8B/">
+										充血模型和贫血模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%9B%9B%E5%A4%A7%E7%89%B9%E6%80%A7/">
+										四大特性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%9F%BA%E4%BA%8E%E6%8E%A5%E5%8F%A3%E8%80%8C%E9%9D%9E%E5%AE%9E%E7%8E%B0%E7%BC%96%E7%A8%8B/">
+										基于接口而非实现编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B/">
+										面向对象与面向过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2.设计原则
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/DRY%E5%8E%9F%E5%88%99/">
+										DRY原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/KISS%E3%80%81YAGNI%E5%8E%9F%E5%88%99/">
+										KISS、YAGNI原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/LOD%E5%8E%9F%E5%88%99/">
+										LOD原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/SOLID%E5%8E%9F%E5%88%99/">
+										SOLID原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/%E4%BB%A3%E7%A0%81%E5%A4%8D%E7%94%A8%E6%80%A7/">
+										代码复用性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3.规范与重构
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/3.%E8%A7%84%E8%8C%83%E4%B8%8E%E9%87%8D%E6%9E%84/%E9%87%8D%E6%9E%84/">
+										重构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4.创建型设计模式
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+										原型模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4.%E5%88%9B%E5%BB%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										建造者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5.结构型设计模式
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down  active">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">
+										享元模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">
+										代理模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
+										桥接模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">
+										组合模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										装饰器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										适配器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										6.行为型设计模式
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E4%B8%AD%E4%BB%8B%E6%A8%A1%E5%BC%8F/">
+										中介模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/">
+										模板模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
+										策略模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/">
+										职责链模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										观察者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										迭代器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										软件开发
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										JAVA
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JAVA/%E5%86%85%E7%9C%81/">
+										内省
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										JVM
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JVM/JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">
+										JVM内存结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spring
+									</a>
+									
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/IoC%E5%AE%B9%E5%99%A8/">
+										IoC容器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/%E6%80%BB%E8%A7%88/">
+										总览
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/%E9%85%8D%E7%BD%AE/">
+										配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	享元模式
+</h1>
+<div class="article-meta">
+	
+	<span>Delmore</span>
+	<span>2020-11-05 16:33:53</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x590D;&#x7528;&#x5BF9;&#x8C61;">&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#x53EF;&#x4EE5;&#x590D;&#x7528;&#x5BF9;&#x8C61;</h1>
+<p><strong>&#x4EAB;&#x5143;&#x6A21;&#x5F0F;</strong>&#xFF08;Flyweight Design Pattern&#xFF09;&#x7684;&#x610F;&#x56FE;&#x662F;&#x590D;&#x7528;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E2D;&#x5B58;&#x5728;&#x5927;&#x91CF;&#x91CD;&#x590D;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E9B;&#x91CD;&#x590D;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#xFF0C; &#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#x5C06;&#x5BF9;&#x8C61;&#x8BBE;&#x8BA1;&#x6210;&#x4EAB;&#x5143;&#xFF0C;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x53EA;&#x4FDD;&#x7559;&#x4E00;&#x4EFD;&#x5B9E;&#x4F8B;&#xFF0C;&#x4F9B;&#x591A;&#x5904;&#x4EE3;&#x7801;&#x5F15;&#x7528;&#x3002; &#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x5185;&#x5B58;&#x4E2D;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x8D77;&#x5230;&#x8282;&#x7701;&#x5185;&#x5B58;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EC5;&#x76F8;&#x540C;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x8BBE;&#x8BA1;&#x6210;&#x4EAB;&#x5143;&#xFF0C;&#x5BF9;&#x4E8E;&#x76F8;&#x4F3C;&#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x4E2D;&#x76F8;&#x540C;&#x7684;&#x90E8;&#x5206;&#xFF08;&#x5B57;&#x6BB5;&#xFF09;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x8BBE;&#x8BA1;&#x6210;&#x4EAB;&#x5143;&#xFF0C;&#x8BA9;&#x8FD9;&#x4E9B;&#x5927;&#x91CF;&#x76F8;&#x4F3C;&#x5BF9;&#x8C61;&#x5F15;&#x7528;&#x8FD9;&#x4E9B;&#x4EAB;&#x5143;&#x3002;</p>
+<blockquote>
+<p><code>&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;</code> &#x6307;&#x7684;&#x662F;&#xFF0C;&#x4E00;&#x65E6;&#x901A;&#x8FC7;&#x6784;&#x9020;&#x51FD;&#x6570;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x5B83;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x5BF9;&#x8C61;&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x6216;&#x8005;&#x5C5E;&#x6027;&#xFF09;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x88AB;&#x4FEE;&#x6539;&#x4E86;&#x3002;&#x4E4B;&#x6240;&#x4EE5;&#x8981;&#x6C42;&#x4EAB;&#x5143;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x4F1A;&#x88AB;&#x591A;&#x5904;&#x4EE3;&#x7801;&#x5171;&#x4EAB;&#x4F7F;&#x7528;&#xFF0C;&#x907F;&#x514D;&#x4E00;&#x5904;&#x4EE3;&#x7801;&#x5BF9;&#x4EAB;&#x5143;&#x8FDB;&#x884C;&#x4E86;&#x4FEE;&#x6539;&#xFF0C;&#x5F71;&#x54CD;&#x5230;&#x5176;&#x4ED6;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<h2 id="&#x68CB;&#x724C;&#x6E38;&#x620F;&#x7684;&#x68CB;&#x5B50;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;">&#x68CB;&#x724C;&#x6E38;&#x620F;&#x7684;&#x68CB;&#x5B50;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x68CB;&#x5B50;&#x4EAB;&#x5143;&#x7C7B;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessPieceUnit {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> id;</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">String</span> text;</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Color</span> color;</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ChessPieceUnit</span>(<span class="dt">int</span> id, <span class="bu">String</span> text, <span class="bu">Color</span> color) {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">id</span> = id;</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">text</span> = text;</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">color</span> = color;</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> <span class="kw">enum</span> <span class="bu">Color</span> {</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    RED, BLACK</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...&#x7701;&#x7565;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x548C;getter&#x65B9;&#x6CD5;...</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li>&#x5C06;&#x68CB;&#x5B50;&#x7684; <code>id</code>&#x3001;<code>text</code>&#x3001;<code>color</code> &#x5C5E;&#x6027;&#x62C6;&#x5206;&#x51FA;&#x6765;&#xFF0C;&#x8BBE;&#x8BA1;&#x6210;&#x72EC;&#x7ACB;&#x7684;&#x7C7B;&#xFF0C;&#x5E76;&#x4E14;&#x4F5C;&#x4E3A;&#x4EAB;&#x5143;&#x4F9B;&#x591A;&#x4E2A;&#x68CB;&#x76D8;&#x590D;&#x7528;&#x3002;</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessPieceUnitFactory {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Map</span>&lt;<span class="bu">Integer</span>, ChessPieceUnit&gt; pieces = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;&gt;();</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">static</span> {</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    pieces.<span class="fu">put</span>(<span class="dv">1</span>, <span class="kw">new</span> <span class="fu">ChessPieceUnit</span>(<span class="dv">1</span>, <span class="st">&quot;&#x8ECA;&quot;</span>, ChessPieceUnit.<span class="fu">Color</span>.<span class="fu">BLACK</span>));</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    pieces.<span class="fu">put</span>(<span class="dv">2</span>, <span class="kw">new</span> <span class="fu">ChessPieceUnit</span>(<span class="dv">2</span>,<span class="st">&quot;&#x99AC;&quot;</span>, ChessPieceUnit.<span class="fu">Color</span>.<span class="fu">BLACK</span>));</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;&#x6446;&#x653E;&#x5176;&#x4ED6;&#x68CB;&#x5B50;&#x7684;&#x4EE3;&#x7801;...</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">static</span> ChessPieceUnit <span class="fu">getChessPiece</span>(<span class="dt">int</span> chessPieceId) {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> pieces.<span class="fu">get</span>(chessPieceId);</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li>&#x5229;&#x7528;&#x5DE5;&#x5382;&#x7C7B;&#x6765;&#x7F13;&#x5B58; <code>ChessPieceUnit</code> &#x4FE1;&#x606F;&#x3002;&#x901A;&#x8FC7;&#x5DE5;&#x5382;&#x7C7B;&#x83B7;&#x53D6;&#x5230;&#x7684; <code>ChessPieceUnit</code> &#x5C31;&#x662F;&#x4EAB;&#x5143;&#x3002;</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x68CB;&#x5B50;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessPiece {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> ChessPieceUnit chessPieceUnit;</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> positionX;</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">int</span> positionY;</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ChessPiece</span>(ChessPieceUnit unit, <span class="dt">int</span> positionX, <span class="dt">int</span> positionY) {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">chessPieceUnit</span> = unit;</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">positionX</span> = positionX;</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span>.<span class="fu">positionY</span> = positionY;</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x7701;&#x7565;getter&#x3001;setter&#x65B9;&#x6CD5;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x68CB;&#x5C40;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> ChessBoard {</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="bu">Map</span>&lt;<span class="bu">Integer</span>, ChessPiece&gt; chessPieces = <span class="kw">new</span> <span class="bu">HashMap</span>&lt;&gt;();</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="fu">ChessBoard</span>() {</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">init</span>();</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">private</span> <span class="dt">void</span> <span class="fu">init</span>() {</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    chessPieces.<span class="fu">put</span>(<span class="dv">1</span>, <span class="kw">new</span> <span class="fu">ChessPiece</span>(</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>            ChessPieceUnitFactory.<span class="fu">getChessPiece</span>(<span class="dv">1</span>), <span class="dv">0</span>,<span class="dv">0</span>));</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    chessPieces.<span class="fu">put</span>(<span class="dv">1</span>, <span class="kw">new</span> <span class="fu">ChessPiece</span>(</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            ChessPieceUnitFactory.<span class="fu">getChessPiece</span>(<span class="dv">2</span>), <span class="dv">1</span>,<span class="dv">0</span>));</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;&#x6446;&#x653E;&#x5176;&#x4ED6;&#x68CB;&#x5B50;&#x7684;&#x4EE3;&#x7801;...</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">public</span> <span class="dt">void</span> <span class="fu">move</span>(<span class="dt">int</span> chessPieceId, <span class="dt">int</span> toPositionX, <span class="dt">int</span> toPositionY) {</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">//...&#x7701;&#x7565;...</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li>&#x6240;&#x6709;&#x7684; <code>ChessBoard</code> &#x5BF9;&#x8C61;&#x5171;&#x4EAB;&#x8FD9; 30 &#x4E2A; <code>ChessPieceUnit</code> &#x5BF9;&#x8C61;&#xFF08;&#x56E0;&#x4E3A;&#x8C61;&#x68CB;&#x4E2D;&#x53EA;&#x6709; 30 &#x4E2A;&#x68CB;&#x5B50;&#xFF09;&#x3002;</li>
+</ul>
+<p>&#x5728;&#x4F7F;&#x7528;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#x4E4B;&#x524D;&#xFF0C;&#x8BB0;&#x5F55; 1 &#x4E07;&#x4E2A;&#x68CB;&#x5C40;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x521B;&#x5EFA; 30 &#x4E07;&#xFF08;30*1 &#x4E07;&#xFF09;&#x4E2A;&#x68CB;&#x5B50;&#x7684; <code>ChessPieceUnit</code> &#x5BF9;&#x8C61;&#x3002; &#x5229;&#x7528;&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x521B;&#x5EFA; 30 &#x4E2A;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;&#x4F9B;&#x6240;&#x6709;&#x68CB;&#x5C40;&#x5171;&#x4EAB;&#x4F7F;&#x7528;&#x5373;&#x53EF;&#xFF0C;&#x5927;&#x5927;&#x8282;&#x7701;&#x4E86;&#x5185;&#x5B58;&#x3002;</p>
+<h2 id="java-integer-&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5927;&#x5C0F;&#x8303;&#x56F4;&#x7684;&#x4EAB;&#x5143;">Java Integer &#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5927;&#x5C0F;&#x8303;&#x56F4;&#x7684;&#x4EAB;&#x5143;</h2>
+<p><code>IntegerCache</code> &#x88AB;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x7F13;&#x5B58;&#x7684;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;&#x4F1A;&#x88AB;&#x96C6;&#x4E2D;&#x4E00;&#x6B21;&#x6027;&#x521B;&#x5EFA;&#x597D;&#x3002; &#x7F13;&#x5B58;&#x5BF9;&#x4E8E;&#x5927;&#x90E8;&#x5206;&#x5E94;&#x7528;&#x6765;&#x8BF4;&#x6700;&#x5E38;&#x7528;&#x7684;&#x6574;&#x578B;&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5927;&#x5C0F;&#xFF08;-128 &#x5230; 127 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#xFF09;&#x3002;</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">private</span> <span class="dt">static</span> <span class="kw">class</span> IntegerCache {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> low = -<span class="dv">128</span>;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">final</span> <span class="dt">int</span> high;</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> <span class="dt">final</span> <span class="bu">Integer</span> cache[];</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">static</span> {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="co">// high value may be configured by property</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> h = <span class="dv">127</span>;</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">String</span> integerCacheHighPropValue =</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            sun.<span class="fu">misc</span>.<span class="fu">VM</span>.<span class="fu">getSavedProperty</span>(<span class="st">&quot;java.lang.Integer.IntegerCache.high&quot;</span>);</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">if</span> (integerCacheHighPropValue != <span class="kw">null</span>) {</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            <span class="kw">try</span> {</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                <span class="dt">int</span> i = <span class="fu">parseInt</span>(integerCacheHighPropValue);</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                i = <span class="bu">Math</span>.<span class="fu">max</span>(i, <span class="dv">127</span>);</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Maximum array size is Integer.MAX_VALUE</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>                h = <span class="bu">Math</span>.<span class="fu">min</span>(i, <span class="bu">Integer</span>.<span class="fu">MAX_VALUE</span> - (-low) -<span class="dv">1</span>);</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>            } <span class="kw">catch</span>( <span class="bu">NumberFormatException</span> nfe) {</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>                <span class="co">// If the property cannot be parsed into an int, ignore it.</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        high = h;</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        cache = <span class="kw">new</span> <span class="bu">Integer</span>[(high - low) + <span class="dv">1</span>];</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>        <span class="dt">int</span> j = low;</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>        <span class="kw">for</span>(<span class="dt">int</span> k = <span class="dv">0</span>; k &lt; cache.<span class="fu">length</span>; k++)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>            cache[k] = <span class="kw">new</span> <span class="bu">Integer</span>(j++);</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="co">// range [-128, 127] must be interned (JLS7 5.1.7)</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        assert IntegerCache.<span class="fu">high</span> &gt;= <span class="dv">127</span>;</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="fu">IntegerCache</span>() {}</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="dt">static</span> <span class="bu">Integer</span> <span class="fu">valueOf</span>(<span class="dt">int</span> i) {</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">if</span> (i &gt;= IntegerCache.<span class="fu">low</span> &amp;&amp; i &lt;= IntegerCache.<span class="fu">high</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>        <span class="kw">return</span> IntegerCache.<span class="fu">cache</span>[i + (-IntegerCache.<span class="fu">low</span>)];</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">return</span> <span class="kw">new</span> <span class="bu">Integer</span>(i);</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i1 = <span class="dv">56</span>;</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i2 = <span class="dv">56</span>;</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i3 = <span class="dv">129</span>;</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="bu">Integer</span> i4 = <span class="dv">129</span>;</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(i1 == i2); <span class="co">// &#x8FD4;&#x56DE;true</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(i3 == i4); <span class="co">// &#x8FD4;&#x56DE;false</span></span></code></pre></div>
+<p>&#x901A;&#x8FC7; <code>JVM</code> &#x53C2;&#x6570;&#x8C03;&#x6574;&#x7F13;&#x5B58;&#x5927;&#x5C0F;&#xFF1A;</p>
+<pre><code>-Djava.lang.Integer.IntegerCache.high=255</code></pre>
+<p>&#x6216;</p>
+<pre><code>-XX:AutoBoxCacheMax=255</code></pre>
+<h2 id="java-&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E5F;&#x662F;&#x4EAB;&#x5143;">Java &#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E5F;&#x662F;&#x4EAB;&#x5143;</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s1 = <span class="st">&quot;aaa&quot;</span>;</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s2 = <span class="st">&quot;aaa&quot;</span>;</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">String</span> s3 = <span class="kw">new</span> <span class="bu">String</span>(<span class="st">&quot;aaa&quot;</span>);</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(s1 == s2); <span class="co">// true</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="bu">System</span>.<span class="fu">out</span>.<span class="fu">println</span>(s1 == s3); <span class="co">// false</span></span></code></pre></div>
+<p>JVM &#x4F1A;&#x4E13;&#x95E8;&#x5F00;&#x8F9F;&#x4E00;&#x5757;&#x5B58;&#x50A8;&#x533A;&#x6765;&#x5B58;&#x50A8;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#xFF0C;&#x8FD9;&#x5757;&#x5B58;&#x50A8;&#x533A;&#x53EB;&#x4F5C; <strong>&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x6C60;</strong>&#x3002; &#x5728;&#x67D0;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5E38;&#x91CF;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B58;&#x50A8;&#x5230;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#xFF0C;&#x5F53;&#x4E4B;&#x540E;&#x518D;&#x7528;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C; &#x76F4;&#x63A5;&#x5F15;&#x7528;&#x5E38;&#x91CF;&#x6C60;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5373;&#x53EF;&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E86;&#x3002;</p>
+<p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x4E2D;&#x5728;&#x521B;&#x5EFA; <code>s2</code> &#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x7531;&#x4E8E;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x5B57;&#x7B26;&#x4E32; <code>aaa</code> &#x7684;&#x5BF9;&#x8C61;&#xFF0C;<code>s2</code> &#x4E0E; <code>s1</code>&#x6307;&#x5411;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<blockquote>
+<p>&#x4EAB;&#x5143;&#x5DE5;&#x5382;&#x7C7B;&#x4E00;&#x76F4;&#x4FDD;&#x5B58;&#x4E86;&#x5BF9;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x8FD9;&#x5C31;&#x5BFC;&#x81F4;&#x4EAB;&#x5143;&#x5BF9;&#x8C61;&#x5728;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C; &#x4E5F;&#x5E76;&#x4E0D;&#x4F1A;&#x88AB; JVM &#x5783;&#x573E;&#x56DE;&#x6536;&#x673A;&#x5236;&#x81EA;&#x52A8;&#x56DE;&#x6536;&#x6389;&#x3002;&#x4E3A;&#x4E86;<strong>&#x4E00;&#x70B9;&#x70B9;</strong>&#x5185;&#x5B58;&#x7684;&#x8282;&#x7701;&#x800C;&#x5F15;&#x5165;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF0C;&#x5F97;&#x4E0D;&#x507F;&#x5931;&#x3002;</p>
+</blockquote>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/%E6%80%BB%E8%A7%88/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">
+                组合模式
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Delmore</a> 
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
