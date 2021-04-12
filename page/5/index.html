@@ -894,6 +894,24 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/4-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/">
+										4-线程同步
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/5-Java%E7%BA%BF%E7%A8%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+										5-Java线程生命周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -913,6 +931,53 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JVM/JVM%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84/">
+				<h2 class="index-title">
+					JVM内存结构
+				</h2>
+				<div class="index-brief">
+					数据类型
+虚拟机支持两种数据类型：基本类型（primitive types）和引用类型（reference types）
+虚拟机运行时数据区
+
+Java虚拟机定义了在程序执行期间使用的各种运行时数据区域。
+线程共享数据区所有线程都能访问这块内存；随虚拟机启动而创建，虚拟机退出而销毁。
+线程隔离数据区
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-10-13</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/">
+				<h2 class="index-title">
+					MySQL常见操作
+				</h2>
+				<div class="index-brief">
+					用户管理
+
+查询用户
+select user,host,plugin,authentication_string from mysql.user;
+添加用户
+create user &#39;用户名&#39;@&#39;主机地址&#39; identified with mysql_native_p
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-10-12</span>
+                    
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/3.%E8%A7%84%E8%8C%83%E4%B8%8E%E9%87%8D%E6%9E%84/%E9%87%8D%E6%9E%84/">
@@ -1096,56 +1161,10 @@ KISS（Keep It Short and Simple）：尽量保持简单。
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2.%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/SOLID%E5%8E%9F%E5%88%99/">
-				<h2 class="index-title">
-					SOLID原则
-				</h2>
-				<div class="index-brief">
-					单一职责原则
-单一职责原则（SRP, Single Responsibility Principle）：一个类或者模块只负责完成一个职责（或者功能）。
-一个类包含了两个或者两个以上业务不相干的功能，那我们就说它职责不够单一，应该将它拆分成多个功能更加单一、粒度更细的类。
-例：一个类里既包含订单的一些
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-10-04</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/%E5%85%85%E8%A1%80%E6%A8%A1%E5%9E%8B%E5%92%8C%E8%B4%AB%E8%A1%80%E6%A8%A1%E5%9E%8B/">
-				<h2 class="index-title">
-					充血模型和贫血模型
-				</h2>
-				<div class="index-brief">
-					贫血模型
-概念
-只包含数据，不包含业务逻辑的类，就叫作 贫血模型（Anemic Domain Model） 。
-结构
-在前后端分离的项目中，服务端基于 MVC 三层架构，分为 ：
-
-Repository 层： 负责数据访问。返回 Entity 结构数据。
-Service 层：负责业务逻辑。调用 Re
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-09-30</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/page/4/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/page/4/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/">&gt;</a>
 		
 	</div>
 </div>

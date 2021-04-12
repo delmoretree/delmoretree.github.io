@@ -894,6 +894,24 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/4-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/">
+										4-线程同步
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/5-Java%E7%BA%BF%E7%A8%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+										5-Java线程生命周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -913,6 +931,53 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/CentOS%E4%B8%AD%E7%9A%84RabbitMQ/">
+				<h2 class="index-title">
+					CentOS中的RabbitMQ
+				</h2>
+				<div class="index-brief">
+					安装
+安装依赖Erlang
+参照 https://github.com/rabbitmq/erlang-rpm 安装最新版的Erlang
+安装RPM
+rpm -ivh rabbitmq-server-3.8.9-1.el7.noarch.rpm
+运行
+启动服务
+[root@hostname home
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-07</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/Linux%E6%8C%82%E8%BD%BDWindows%E5%85%B1%E4%BA%AB%E7%9B%98/">
+				<h2 class="index-title">
+					Linux挂载Windows共享盘
+				</h2>
+				<div class="index-brief">
+					安装cifs
+yum install -y cifs-utils
+命令
+mount -t cifs -o vers=2.0,username=&lt;用户名&gt;,password=&lt;密码&gt; &lt;//Windows共享盘IP/目录&gt; &lt;挂载到的Linux目录&gt;
+检
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-03</span>
+                    
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/JAVA/%E5%86%85%E7%9C%81/">
@@ -1112,55 +1177,10 @@ public abstract class Handler {
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					策略模式
-				</h2>
-				<div class="index-brief">
-					策略模式避免冗长的分支判断
-策略是一个接口和一组实现类
-策略类的定义比较简单，包含一个策略接口和一组实现这个接口的策略类。 因为所有的策略类都实现相同的接口，所以，客户端代码基于接口而非实现编程，可以灵活地替换不同的策略。
-
-public interface Strategy {
-  void al
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-11-11</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/6.%E8%A1%8C%E4%B8%BA%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					模板模式
-				</h2>
-				<div class="index-brief">
-					不改变整体结构，子类重新定义逻辑
-模板模式：在一个方法中定义一个算法骨架，并将某些步骤推迟到子类中实现。模板方法模式可以让子类在不改变算法整体结构的情况下，重新定义算法中的某些步骤。
-
-public abstract class AbstractClass {
-  public final void
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-11-11</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/6/">6</a><a class="extend next" rel="next" href="/archives/page/3/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/7/">7</a><a class="extend next" rel="next" href="/archives/page/3/">&gt;</a>
 		
 	</div>
 </div>

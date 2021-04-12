@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		Java线程生命周期 | 
 	 
 	1⃣️3⃣️太狼🐺
 	</title>
@@ -904,7 +906,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file fa fa-angle-down ">
+								<li class="file fa fa-angle-down  active">
 									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/5-Java%E7%BA%BF%E7%A8%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
 										5-Java线程生命周期
 									</a>
@@ -930,59 +932,91 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/%E5%9B%BD%E9%99%85%E5%85%B3%E7%B3%BB/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E%E4%B8%8B%E5%90%84%E5%9B%BD%E6%8F%B4%E5%8A%A9%E7%9A%84%E8%83%8C%E5%90%8E%E6%98%AF%E5%9B%BD%E9%99%85%E6%94%BF%E6%B2%BB%E5%88%A9%E7%9B%8A/">
-				<h2 class="index-title">
-					新冠肺炎下各国援助的背后是国际政治利益
-				</h2>
-				<div class="index-brief">
-					这个世界的国家政治，没有无缘无故的爱，也没有无缘无故的恨。 就这一个概念而已。
-中国接受巴基斯坦所谓善意的同时，也得做好这两天被印度黑客连续攻击国家卫生系统网络的准备。
-日本这次“山川异域风月同天”的背后，难免有几分小心思是怕疫情蔓延对2020东京奥运会不利。
-美国就算再怎么死踩，还是不得不在世界卫
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-02-28</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-1-%E5%AF%BC%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5/">
-				<h2 class="index-title">
-					2-1-导数的概念
-				</h2>
-				<div class="index-brief">
-					引例
-1. 平均变化率
-在一个普通的室内，假设在t=9:00时，温度为u=20 \degree C，\tilde{t}=9:05时，温度为\tilde{u}=25\degree C，则在着5min里室内温度的平均变化率为：
+		<h1 id="article-title">
 
-\frac{\Delta u}{\Delta t} = \frac{\ti
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-02-28</span>
-                    
-                            
-                    
-                </div>
-		</div>	
+	5-Java线程生命周期
+</h1>
+<div class="article-meta">
 	
-	
-	<div id="index-paginator">
-		
-			<a class="extend prev" rel="prev" href="/archives/2020/page/5/">&lt;</a><a class="page-number" href="/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/4/">4</a><a class="page-number" href="/archives/2020/page/5/">5</a><span class="page-number current">6</span>
-		
-	</div>
+	<span>Delmore</span>
+	<span>2021-03-14 12:34:53</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
 </div>
 
+<div id="article-content">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous"><figure>
+<img src="https://technotetech.oss-cn-shenzhen.aliyuncs.com/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/IMG_8CF4A2A44C42-1.jpeg?x-oss-process=style/size" alt="Java&#x7EBF;&#x7A0B;&#x7684;&#x72B6;&#x6001;"><figcaption aria-hidden="true">Java&#x7EBF;&#x7A0B;&#x7684;&#x72B6;&#x6001;</figcaption>
+</figure>
+<p>Java &#x7EBF;&#x7A0B;&#x6709; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> &#x79CD;&#x72B6;&#x6001;&#xFF1A;</p>
+<ol type="1">
+<li>NEW&#xFF08;&#x521D;&#x59CB;&#x5316;&#x72B6;&#x6001;&#xFF09;</li>
+<li>RUNNABLE&#xFF08;&#x53EF;&#x8FD0;&#x884C; / &#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF09;</li>
+<li>BLOCKED&#xFF08;&#x963B;&#x585E;&#x72B6;&#x6001;&#xFF09;</li>
+<li>WAITING&#xFF08;&#x65E0;&#x65F6;&#x9650;&#x7B49;&#x5F85;&#xFF09;</li>
+<li>TIMED_WAITING&#xFF08;&#x6709;&#x65F6;&#x9650;&#x7B49;&#x5F85;&#xFF09;</li>
+<li>TERMINATED&#xFF08;&#x7EC8;&#x6B62;&#x72B6;&#x6001;&#xFF09;</li>
+</ol>
+<h1 id="&#x7EBF;&#x7A0B;&#x5207;&#x6362;">&#x7EBF;&#x7A0B;&#x5207;&#x6362;</h1>
+<h2 id="runnable-&#x5207;&#x6362;&#x5230;-blocked"><code>Runnable</code> &#x5207;&#x6362;&#x5230; <code>BLOCKED</code></h2>
+<p>&#x7EBF;&#x7A0B;&#x7B49;&#x5F85; <code>synchronized</code> &#x7684;&#x9690;&#x5F0F;&#x9501;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;&#x8FD9;&#x79CD;&#x8F6C;&#x6362;&#x3002;&#x7B49;&#x7EBF;&#x7A0B;&#x83B7;&#x5F97; <code>synchronized</code> &#x9501;&#x65F6;&#xFF0C;&#x53C8;&#x4F1A;&#x4ECE; <strong>BLOCKED</strong> &#x8F6C;&#x6362;&#x5230; <strong>RUNNABLE</strong>&#x3002;</p>
+<blockquote>
+<p>&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x963B;&#x585E;&#x5F0F;API&#x65F6;&#xFF0C;&#x5C3D;&#x7BA1;<a href="/&#x8BA1;&#x7B97;&#x673A;/&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;/1-&#x8FDB;&#x7A0B;&#x4E0E;&#x7EBF;&#x7A0B;/#&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;">&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5C42;&#x9762;&#x4F1A;&#x8F6C;&#x6362;&#x5230;&#x4F11;&#x7720;&#x72B6;&#x6001;</a>&#xFF0C;&#x4F46;&#x5728;JVM&#x5C42;&#x9762;&#xFF0C;&#x4F9D;&#x65E7;&#x662F;RUNNABLE&#x72B6;&#x6001;&#x3002;</p>
+</blockquote>
+<h2 id="runnable-&#x5207;&#x6362;&#x5230;-waiting"><code>Runnable</code> &#x5207;&#x6362;&#x5230; <code>WAITING</code></h2>
+<ol type="1">
+<li>&#x83B7;&#x5F97; <code>synchronized</code> &#x9501;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x8C03;&#x7528;<em>&#x65E0;&#x53C2;&#x6570;</em>&#x7684; <code>Object.wait()</code> &#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x8C03;&#x7528;<em>&#x65E0;&#x53C2;&#x6570;</em>&#x7684; <code>Thread.join()</code> &#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x8C03;&#x7528;<em>&#x65E0;&#x53C2;&#x6570;</em>&#x7684; <code>LockSupport.park()</code> &#x65B9;&#x6CD5;&#x3002;&#x5F85;&#x8C03;&#x7528; <code>LockSupport.unpark(Thread thread)</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x53EF;&#x5C06;&#x76EE;&#x6807;&#x7EBF;&#x7A0B;&#x5524;&#x9192;&#xFF0C;&#x76EE;&#x6807;&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x4ECE; <strong>WAITING</strong> &#x5207;&#x6362;&#x5230; <strong>RUNNABLE</strong>&#x3002;</li>
+</ol>
+<h2 id="runnable-&#x5207;&#x6362;&#x5230;-timed_waiting"><code>Runnable</code> &#x5207;&#x6362;&#x5230; <code>TIMED_WAITING</code></h2>
+<ol type="1">
+<li>&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>Thread.sleep(long millis)</code> &#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x83B7;&#x5F97; <code>synchronized</code> &#x9501;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>Object.wait(long timeout)</code> &#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>Thread.join(long millis)</code> &#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>LockSupport.parkNanos(Object blocker, long deadline)</code> &#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>LockSupport.parkUntil(long deadline)</code> &#x65B9;&#x6CD5;&#x3002;</li>
+</ol>
+<blockquote>
+<p>&#x4ECE; RUNNABLE &#x5207;&#x6362;&#x5230; TIMED_WAITING &#x548C; WAITING &#x72B6;&#x6001;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#x591A;&#x4E86;&#x8D85;&#x65F6;&#x53C2;&#x6570;&#x3002;</p>
+</blockquote>
+<h2 id="new-&#x5207;&#x6362;&#x5230;-runnable"><code>NEW</code> &#x5207;&#x6362;&#x5230; <code>Runnable</code></h2>
+<p>Java &#x521A;&#x521B;&#x5EFA;&#x51FA; <code>Thread</code> &#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x7EBF;&#x7A0B;&#x5C31;&#x662F; <strong>NEW</strong> &#x72B6;&#x6001;&#x3002;&#x6B64;&#x65F6;&#x8BE5;&#x7EBF;&#x7A0B;&#x4E0D;&#x4F1A;&#x88AB;&#x7CFB;&#x7EDF;&#x6267;&#x884C;&#xFF0C;&#x5FC5;&#x987B;&#x8C03;&#x7528; <code>start()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4F1A;&#x5C06;&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x5207;&#x6362;&#x4E3A; <strong>RUNNABLE</strong>&#xFF0C;&#x7CFB;&#x7EDF;&#x4FBF;&#x4F1A;&#x6839;&#x636E;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#x9002;&#x65F6;&#x8FD0;&#x884C;&#x3002;</p>
+<h2 id="runnable-&#x5207;&#x6362;&#x5230;-terminated"><code>Runnable</code> &#x5207;&#x6362;&#x5230; <code>TERMINATED</code></h2>
+<p>&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5B8C; <code>run()</code> &#x65B9;&#x6CD5;&#x6216;&#x88AB;&#x5F3A;&#x884C;&#x4E2D;&#x65AD;&#xFF0C;&#x5373;&#x5207;&#x6362;&#x5230; <strong>TERMINATED</strong> &#x72B6;&#x6001;&#x3002;</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/4-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  4-线程同步
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/3-%E6%AD%BB%E9%94%81%E4%B8%8E%E9%A5%A5%E9%A5%BF/">
+                3-死锁与饥饿
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>

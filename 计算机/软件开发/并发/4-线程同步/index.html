@@ -8,6 +8,8 @@
 	<!-- title -->
 	
 	<title>
+	
+		线程同步 | 
 	 
 	1⃣️3⃣️太狼🐺
 	</title>
@@ -895,7 +897,7 @@
 							</ul>
 			
 							<ul>
-								<li class="file fa fa-angle-down ">
+								<li class="file fa fa-angle-down  active">
 									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/4-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/">
 										4-线程同步
 									</a>
@@ -930,59 +932,148 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<div id="index">
-	
-		<div class="index-li">
-			<a href="/%E5%9B%BD%E9%99%85%E5%85%B3%E7%B3%BB/%E6%96%B0%E5%86%A0%E8%82%BA%E7%82%8E%E4%B8%8B%E5%90%84%E5%9B%BD%E6%8F%B4%E5%8A%A9%E7%9A%84%E8%83%8C%E5%90%8E%E6%98%AF%E5%9B%BD%E9%99%85%E6%94%BF%E6%B2%BB%E5%88%A9%E7%9B%8A/">
-				<h2 class="index-title">
-					新冠肺炎下各国援助的背后是国际政治利益
-				</h2>
-				<div class="index-brief">
-					这个世界的国家政治，没有无缘无故的爱，也没有无缘无故的恨。 就这一个概念而已。
-中国接受巴基斯坦所谓善意的同时，也得做好这两天被印度黑客连续攻击国家卫生系统网络的准备。
-日本这次“山川异域风月同天”的背后，难免有几分小心思是怕疫情蔓延对2020东京奥运会不利。
-美国就算再怎么死踩，还是不得不在世界卫
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-02-28</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-1-%E5%AF%BC%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5/">
-				<h2 class="index-title">
-					2-1-导数的概念
-				</h2>
-				<div class="index-brief">
-					引例
-1. 平均变化率
-在一个普通的室内，假设在t=9:00时，温度为u=20 \degree C，\tilde{t}=9:05时，温度为\tilde{u}=25\degree C，则在着5min里室内温度的平均变化率为：
+		<h1 id="article-title">
 
-\frac{\Delta u}{\Delta t} = \frac{\ti
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-02-28</span>
-                    
-                            
-                    
-                </div>
-		</div>	
+	4-线程同步
+</h1>
+<div class="article-meta">
 	
-	
-	<div id="index-paginator">
-		
-			<a class="extend prev" rel="prev" href="/archives/2020/page/5/">&lt;</a><a class="page-number" href="/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/4/">4</a><a class="page-number" href="/archives/2020/page/5/">5</a><span class="page-number current">6</span>
-		
-	</div>
+	<span>Delmore</span>
+	<span>2021-03-31 14:16:55</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
 </div>
 
+<div id="article-content">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous"><p>&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x540C;&#x65F6;&#x5DE5;&#x4F5C;&#xFF0C;&#x7ECF;&#x5E38;&#x4F1A;&#x9700;&#x8981;&#x6B65;&#x8C03;&#x4E00;&#x81F4;&#x3002;</p>
+<h1 id="&#x901A;&#x8FC7;-join-&#x65B9;&#x6CD5;&#x7B49;&#x5F85;&#x7EBF;&#x7A0B;&#x7ED3;&#x675F;">&#x901A;&#x8FC7; <code>join()</code> &#x65B9;&#x6CD5;&#x7B49;&#x5F85;&#x7EBF;&#x7A0B;&#x7ED3;&#x675F;</h1>
+<p>&#x4F8B;&#xFF0C;&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x67E5;&#x8BE2;&#xFF0C;&#x6700;&#x7EC8;&#x6BD4;&#x8F83;&#x7ED3;&#x679C;&#x540E;&#x5199;&#x5165;&#x5DEE;&#x5F02;&#xFF1A;</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span><span class="op">(</span>&#x5B58;&#x5728;&#x672A;&#x5BF9;&#x8D26;&#x8BA2;&#x5355;<span class="op">){</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x67E5;&#x8BE2;&#x672A;&#x5BF9;&#x8D26;&#x8BA2;&#x5355;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Thread</span> T1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Thread</span><span class="op">(()-&gt;{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        pos <span class="op">=</span> <span class="fu">getPOrders</span><span class="op">();</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    T1<span class="op">.</span><span class="fu">start</span><span class="op">();</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x67E5;&#x8BE2;&#x6D3E;&#x9001;&#x5355;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Thread</span> T2 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Thread</span><span class="op">(()-&gt;{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        dos <span class="op">=</span> <span class="fu">getDOrders</span><span class="op">();</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    T2<span class="op">.</span><span class="fu">start</span><span class="op">();</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x7B49;&#x5F85;T1&#x3001;T2&#x7ED3;&#x675F;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    T1<span class="op">.</span><span class="fu">join</span><span class="op">();</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    T2<span class="op">.</span><span class="fu">join</span><span class="op">();</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x6267;&#x884C;&#x5BF9;&#x8D26;&#x64CD;&#x4F5C;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    diff <span class="op">=</span> <span class="fu">check</span><span class="op">(</span>pos<span class="op">,</span> dos<span class="op">);</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x5DEE;&#x5F02;&#x5199;&#x5165;&#x5DEE;&#x5F02;&#x5E93;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">save</span><span class="op">(</span>diff<span class="op">);</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h1 id="countdownlatch-&#x53EF;&#x4EE5;&#x7B49;&#x5F85;&#x8BA1;&#x6570;&#x5668;&#x5F52;&#x96F6;"><code>CountDownLatch</code> &#x53EF;&#x4EE5;&#x7B49;&#x5F85;&#x8BA1;&#x6570;&#x5668;&#x5F52;&#x96F6;</h1>
+<p>&#x7531;&#x4E8E;&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x90FD;&#x4F1A;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x6548;&#x7387;&#x592A;&#x4F4E;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x6C60;&#x3002;&#x4F46;&#x7EBF;&#x7A0B;&#x6C60;&#x91CC;&#x7684;&#x7EBF;&#x7A0B;&#x4E0D;&#x4F1A;&#x9000;&#x51FA;&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528; <code>join()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>CountDownLatch</code> &#x5728;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x7ED3;&#x675F;&#x5DE5;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C; <code>countDown()</code> &#x65B9;&#x6CD5;&#x8BA9;&#x8BA1;&#x6570;&#x5668;&#x51CF; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>&#xFF0C;&#x5E76;&#x5728;&#x8C03;&#x7528; <code>await()</code> &#x65B9;&#x6CD5;&#x5904;&#x7B49;&#x5F85;&#x8BA1;&#x6570;&#x5668;&#x5F52; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> &#x65F6;&#xFF0C;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x3002;</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x521B;&#x5EFA;2&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Executor</span> executor <span class="op">=</span> <span class="bu">Executors</span><span class="op">.</span><span class="fu">newFixedThreadPool</span><span class="op">(</span><span class="dv">2</span><span class="op">);</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span><span class="op">(</span>&#x5B58;&#x5728;&#x672A;&#x5BF9;&#x8D26;&#x8BA2;&#x5355;<span class="op">){</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x8BA1;&#x6570;&#x5668;&#x521D;&#x59CB;&#x5316;&#x4E3A;2</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">CountDownLatch</span> latch <span class="op">=</span> <span class="kw">new</span> <span class="bu">CountDownLatch</span><span class="op">(</span><span class="dv">2</span><span class="op">);</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x67E5;&#x8BE2;&#x672A;&#x5BF9;&#x8D26;&#x8BA2;&#x5355;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    executor<span class="op">.</span><span class="fu">execute</span><span class="op">(()-&gt;</span> <span class="op">{</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        pos <span class="op">=</span> <span class="fu">getPOrders</span><span class="op">();</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        latch<span class="op">.</span><span class="fu">countDown</span><span class="op">();</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x67E5;&#x8BE2;&#x6D3E;&#x9001;&#x5355;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    executor<span class="op">.</span><span class="fu">execute</span><span class="op">(()-&gt;</span> <span class="op">{</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        dos <span class="op">=</span> <span class="fu">getDOrders</span><span class="op">();</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        latch<span class="op">.</span><span class="fu">countDown</span><span class="op">();</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x7B49;&#x5F85;&#x4E24;&#x4E2A;&#x67E5;&#x8BE2;&#x64CD;&#x4F5C;&#x7ED3;&#x675F;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    latch<span class="op">.</span><span class="fu">await</span><span class="op">();</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x6267;&#x884C;&#x5BF9;&#x8D26;&#x64CD;&#x4F5C;</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    diff <span class="op">=</span> <span class="fu">check</span><span class="op">(</span>pos<span class="op">,</span> dos<span class="op">);</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x5DEE;&#x5F02;&#x5199;&#x5165;&#x5DEE;&#x5F02;&#x5E93;</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">save</span><span class="op">(</span>diff<span class="op">);</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h1 id="cyclicbarrier&#x4F7F;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x4E92;&#x76F8;&#x7B49;&#x5F85;"><code>CyclicBarrier</code>&#x4F7F;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x4E92;&#x76F8;&#x7B49;&#x5F85;</h1>
+<p>&#x4E0E; <code>CountDownLatch</code> &#x7C7B;&#x4F3C;&#xFF0C;<code>CyclicBarrier</code> &#x7684; <code>await()</code> &#x65B9;&#x6CD5;&#x4F7F;&#x8BA1;&#x6570;&#x5668;&#x51CF; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> &#x3002;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5F53;&#x8BA1;&#x6570;&#x5668;&#x5F52; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> &#xFF0C;&#x4F1A;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x5C06;&#x8BA1;&#x6570;&#x5668;&#x91CD;&#x65B0;&#x8BBE;&#x4E3A;&#x521D;&#x59CB;&#x503C;&#x3002;</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x8BA2;&#x5355;&#x961F;&#x5217;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">Vector</span><span class="op">&lt;</span>P<span class="op">&gt;</span> pos<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x6D3E;&#x9001;&#x5355;&#x961F;&#x5217;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">Vector</span><span class="op">&lt;</span>D<span class="op">&gt;</span> dos<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">// &#x6267;&#x884C;&#x56DE;&#x8C03;&#x7684;&#x7EBF;&#x7A0B;&#x6C60; </span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">Executor</span> executor <span class="op">=</span> </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Executors</span><span class="op">.</span><span class="fu">newFixedThreadPool</span><span class="op">(</span><span class="dv">1</span><span class="op">);</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="dt">final</span> <span class="bu">CyclicBarrier</span> barrier <span class="op">=</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">CyclicBarrier</span><span class="op">(</span><span class="dv">2</span><span class="op">,</span> <span class="op">()-&gt;{</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    executor<span class="op">.</span><span class="fu">execute</span><span class="op">(()-&gt;</span><span class="fu">check</span><span class="op">());</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">});</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> <span class="fu">check</span><span class="op">(){</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  P p <span class="op">=</span> pos<span class="op">.</span><span class="fu">remove</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  D d <span class="op">=</span> dos<span class="op">.</span><span class="fu">remove</span><span class="op">(</span><span class="dv">0</span><span class="op">);</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x6267;&#x884C;&#x5BF9;&#x8D26;&#x64CD;&#x4F5C;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  diff <span class="op">=</span> <span class="fu">check</span><span class="op">(</span>p<span class="op">,</span> d<span class="op">);</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="co">// &#x5DEE;&#x5F02;&#x5199;&#x5165;&#x5DEE;&#x5F02;&#x5E93;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">save</span><span class="op">(</span>diff<span class="op">);</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="dt">void</span> <span class="fu">checkAll</span><span class="op">(){</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x5FAA;&#x73AF;&#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5E93;</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Thread</span> T1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Thread</span><span class="op">(()-&gt;{</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span><span class="op">(</span>&#x5B58;&#x5728;&#x672A;&#x5BF9;&#x8D26;&#x8BA2;&#x5355;<span class="op">){</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            <span class="co">// &#x67E5;&#x8BE2;&#x8BA2;&#x5355;&#x5E93;</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>            pos<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="fu">getPOrders</span><span class="op">());</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            <span class="co">// &#x7B49;&#x5F85;</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>            barrier<span class="op">.</span><span class="fu">await</span><span class="op">();</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    T1<span class="op">.</span><span class="fu">start</span><span class="op">();</span>  </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="co">// &#x5FAA;&#x73AF;&#x67E5;&#x8BE2;&#x8FD0;&#x5355;&#x5E93;</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Thread</span> T2 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Thread</span><span class="op">(()-&gt;{</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span><span class="op">(</span>&#x5B58;&#x5728;&#x672A;&#x5BF9;&#x8D26;&#x8BA2;&#x5355;<span class="op">){</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>            <span class="co">// &#x67E5;&#x8BE2;&#x8FD0;&#x5355;&#x5E93;</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>            dos<span class="op">.</span><span class="fu">add</span><span class="op">(</span><span class="fu">getDOrders</span><span class="op">());</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>            <span class="co">// &#x7B49;&#x5F85;</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>            barrier<span class="op">.</span><span class="fu">await</span><span class="op">();</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    <span class="op">});</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    T2<span class="op">.</span><span class="fu">start</span><span class="op">();</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/5-Java%E7%BA%BF%E7%A8%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+                5-Java线程生命周期
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+
+<script>
+	
+	
+</script>
 	</div>
 	<div id="footer">
 	<p>

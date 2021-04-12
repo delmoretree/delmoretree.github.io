@@ -894,6 +894,24 @@
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/4-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/">
+										4-线程同步
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/5-Java%E7%BA%BF%E7%A8%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+										5-Java线程生命周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -915,13 +933,76 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/4-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/">
+				<h2 class="index-title">
+					4-线程同步
+				</h2>
+				<div class="index-brief">
+					多个线程同时工作，经常会需要步调一致。
+通过 join() 方法等待线程结束
+例，两个线程一个执行不同的查询，最终比较结果后写入差异：
+while(存在未对账订单){
+
+    // 查询未对账订单
+    Thread T1 = new Thread(()-&gt;{
+        pos = 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-31</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/5-Java%E7%BA%BF%E7%A8%8B%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+				<h2 class="index-title">
+					5-Java线程生命周期
+				</h2>
+				<div class="index-brief">
+					
+Java线程的状态
+
+Java 线程有 6 种状态：
+
+NEW（初始化状态）
+RUNNABLE（可运行 / 运行状态）
+BLOCKED（阻塞状态）
+WAITING（无时限等待）
+TIMED_WAITING（有时限等待）
+TERMINATED（终止状态）
+
+线程切换
+Runnable 切换到 BLO
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-14</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/3-%E6%AD%BB%E9%94%81%E4%B8%8E%E9%A5%A5%E9%A5%BF/">
 				<h2 class="index-title">
 					3-死锁与饥饿
 				</h2>
 				<div class="index-brief">
-					
+					死锁定义为一组相互竞争系统资源或进行通信的进程间的永久阻塞。
+当一组进程中的每个进程都在等待某个事件，而仅有这组进程中被阻塞的其他进程才可触发该事件时，就称这组进程发生了死锁。
+因为没有事件能够被触发，因此死锁是永久性的。
+通过联合进程图，描述了两个进程竞争两个资源的进展情况：
 
+死锁示例
+
+
+Q获
 					...
 				</div>
 			</a>
@@ -939,8 +1020,11 @@
 					2-互斥与同步
 				</h2>
 				<div class="index-brief">
-					
+					在单处理器多道程序设计系统中，进程会被交替地执行，因而在宏观上表现出一种并发执行的外部特征。 而多处理器系统中，不仅可以从单个核心的角度看是交替执行进程，还可以在多个核心的角度上看多个进程是重叠执行的。
 
+多处理器中进程重叠执行
+
+单处理器条件下，中断可能会在进程中的任何地方停止指令的执行，对于一个
 					...
 				</div>
 			</a>
@@ -958,8 +1042,10 @@
 					1-进程与线程
 				</h2>
 				<div class="index-brief">
-					处理器的速度比大部分IO设备的速度都要快得多。 程序在IO设备上运行时，处理器必须暂停保持空闲，等待IO处理结果。这将导致严重的资源浪费。 如果当CPU挂起，等待其他设备运行结果时，将原有程序挂起，转而运行其他程序，则CPU的利用率将会得到大幅提高。
-另一方面，在单核系统中，为了在宏观上实现程序的并
+					为了提高CPU的利用率发明了进程
+处理器的速度比大部分IO设备的速度都要快得多。
+程序在IO设备上运行时，处理器必须暂停保持空闲，等待IO处理结果（如图a）。这将导致严重的资源浪费。
+如果当CPU阻塞，等待其他设备运行结果时，将原有程序挂起，转而运行其他程序（如图b），则CPU的利用率将会得到大幅提
 					...
 				</div>
 			</a>
@@ -977,8 +1063,9 @@
 					3-互斥锁解决原子性问题
 				</h2>
 				<div class="index-brief">
-					
-
+					在多核架构的系统下，可能同时有多个程序正在被执行，如果不加限制的访问共享资源，将会影响程序运行的正确性。 保证访问共享资源的进程之间是互斥的，就能保证程序执行的原子性。
+通过 synchronized 实现的管程
+在Java中，通过 synchronized 关键字提供互斥原语，对对象尝试加锁，如果
 					...
 				</div>
 			</a>
