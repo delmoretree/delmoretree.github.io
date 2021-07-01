@@ -153,8 +153,17 @@
 									
 							<ul>
 								<li class="file fa fa-angle-down ">
-									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-1-%E5%AF%BC%E6%95%B0%E7%9A%84%E6%A6%82%E5%BF%B5/">
-										2-1-导数的概念
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-1-%E5%AF%BC%E6%95%B0/">
+										2-1-导数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
+									<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-2-%E5%BE%AE%E5%88%86/">
+										2-2-微分
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -878,6 +887,15 @@
 									
 							<ul>
 								<li class="file fa fa-angle-down ">
+									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/AOP%EF%BC%88%E9%9D%A2%E5%90%91%E5%88%87%E9%9D%A2%E7%BC%96%E7%A8%8B%EF%BC%89/">
+										AOP（面向切面编程）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file fa fa-angle-down ">
 									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/Spring/%E6%80%BB%E8%A7%88/">
 										总览
 									</a>
@@ -969,6 +987,28 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">
+				<h2 class="index-title">
+					组合模式
+				</h2>
+				<div class="index-brief">
+					组合模式用于处理树形结构的数据
+组合模式（Composite Design Pattern）是将一组对象组织（Compose）成树形结构，以表示一种 部分 - 整体 的层次结构。 组合让调用者可以统一单个对象和组合对象的处理逻辑。
+组织结构是个典型的组合模式
+
+public abstract cla
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-11-05</span>
+                    
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/5.%E7%BB%93%E6%9E%84%E5%9E%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
@@ -1180,32 +1220,6 @@ $s1 = $s2 - $s3
 
 立即数加法
 addi $s1, $s2, 20
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-10-25</span>
-                    
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1.%20%E6%8C%87%E4%BB%A4/1-6-%E8%BF%87%E7%A8%8B%E7%9A%84%E6%89%A7%E8%A1%8C/">
-				<h2 class="index-title">
-					1-6-过程的执行
-				</h2>
-				<div class="index-brief">
-					过程的执行步骤
-将参数放在过程可以访问的位置
-调用者将参数放在$a0-$a3寄存器中。
-将控制转交给过程
-通过jal指令，跳转到过程开始所在的指令。此时会把下一条指令的地址（即 PC+4）存储在$ra寄存器中，供控制返回时跳转。
-
-程序计数器（PC）：寄存器，其值为程序中正在被执行的指令的地址。
-
 
 					...
 				</div>

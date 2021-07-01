@@ -8,8 +8,6 @@
 	<!-- title -->
 	
 	<title>
-	
-		Java线程 | 
 	 
 	1⃣️3⃣️太狼🐺
 	</title>
@@ -926,7 +924,7 @@
 									</a>
 									
 							<ul>
-								<li class="file fa fa-angle-down  active">
+								<li class="file fa fa-angle-down ">
 									<a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/0-Java%E7%BA%BF%E7%A8%8B/">
 										0-Java线程
 									</a>
@@ -988,161 +986,37 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<h1 id="article-title">
-
-	0-Java线程
-</h1>
-<div class="article-meta">
+		<div id="index">
 	
-	<span>Delmore</span>
-	<span>2021-03-14 12:34:53</span>
-    
-		<div id="article-categories">
-            
-		</div>
-    
+		<div class="index-li">
+			<a href="/%E6%95%B0%E5%AD%A6/%E5%88%86%E6%9E%90%E5%AD%A6/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90/2-%E5%BE%AE%E5%88%86%E5%AD%A6/2-2-%E5%BE%AE%E5%88%86/">
+				<h2 class="index-title">
+					2-2-微分
+				</h2>
+				<div class="index-brief">
+					引例
+当一个函数的自变量有微小的改变时，它的因变量一般来说也会有一个相应的改变。微分的原始思想在于寻找一种方法，当因变量的改变也是很小的时候，能够渐变而又比较精确地估计出这个改变量。
+如图所示：
+设正方形的边长为 x ，当其边长增加 \delta x 时，其面积 S 增加了
+
+\Delta S = 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-07-01</span>
+                    
+                            
+                    
+                </div>
+		</div>	
+	
+	
+	<div id="index-paginator">
+		
+	</div>
 </div>
 
-<div id="article-content">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous"><h1 id="&#x7EBF;&#x7A0B;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x6267;&#x884C;">&#x7EBF;&#x7A0B;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x6267;&#x884C;</h1>
-<h2 id="&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;">&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;</h2>
-<ol type="1">
-<li>&#x901A;&#x8FC7;&#x7EE7;&#x627F; <code>Thread</code> &#x7C7B;&#x5E76;&#x91CD;&#x5199; <code>run()</code> &#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x65B0;&#x7EBF;&#x7A0B;&#x3002;</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NewThread <span class="kw">extends</span> <span class="bu">Thread</span> <span class="op">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">@Override</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">run</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// &#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<ol start="2" type="1">
-<li>&#x901A;&#x8FC7;&#x5B9E;&#x4F8B;&#x5316; <code>Thread</code> &#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x65B0;&#x7EBF;&#x7A0B;&#x3002;</li>
-</ol>
-<p>&#x7EBF;&#x7A0B;&#x5BF9;&#x8C61; <code>Thread</code> &#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x4E86; <code>Runnable</code> &#x63A5;&#x53E3;&#x7684; <code>run</code> &#x65B9;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x8D4B;&#x503C;&#x7ED9; <code>target</code> &#x5C5E;&#x6027;&#xFF1A;</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Runnable</span> r <span class="op">=</span> <span class="op">()</span> <span class="op">-&gt;</span> <span class="op">{</span> task code <span class="op">};</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">Thread</span> t <span class="op">=</span> <span class="kw">new</span> <span class="bu">Thread</span><span class="op">(</span>r<span class="op">);</span></span></code></pre></div>
-<p>&#x5728;&#x5185;&#x90E8;&#xFF0C;<code>run()</code> &#x65B9;&#x6CD5;&#x8FD0;&#x884C;&#x8C03;&#x7528; <code>target</code> &#x5C5E;&#x6027;&#xFF08;&#x5373; <code>Runnable</code> &#x5B9E;&#x73B0;&#x5BF9;&#x8C61;&#xFF09;&#xFF0C;&#x7684; <code>run()</code> &#x65B9;&#x6CD5;&#x3002;</p>
-<p>&#x8BE5;&#x65B9;&#x6CD5;&#x66F4;&#x5177;&#x4F18;&#x52BF;&#xFF1A; - &#x9002;&#x5408;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x5BF9;&#x8C61;&#xFF0C;&#x6267;&#x884C;&#x76F8;&#x540C;&#x7684;&#x4EFB;&#x52A1;&#x3002; - &#x589E;&#x52A0;&#x7A0B;&#x5E8F;&#x7684;&#x5065;&#x58EE;&#x6027;&#xFF0C;&#x5B9E;&#x73B0;&#x89E3;&#x8026;&#x64CD;&#x4F5C;&#xFF0C;&#x4EE3;&#x7801;&#x53EF;&#x88AB;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#xFF0C;&#x4EE3;&#x7801;&#x548C;&#x7EBF;&#x7A0B;&#x72EC;&#x7ACB;&#x3002; - &#x7EBF;&#x7A0B;&#x6C60;&#x53EA;&#x80FD;&#x653E;&#x5165;&#x4F20;&#x5165;&#x4E86; <code>Runnable</code> &#x5B9E;&#x73B0;&#x7C7B;&#x7684;&#x7EBF;&#x7A0B;&#x3002;</p>
-<h2 id="&#x542F;&#x52A8;&#x7EBF;&#x7A0B;">&#x542F;&#x52A8;&#x7EBF;&#x7A0B;</h2>
-<p>&#x8C03;&#x7528; <code>Thread</code> &#x5BF9;&#x8C61;&#x7684; <code>start</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6267;&#x884C; <code>run</code> &#x65B9;&#x6CD5;&#x7684;&#x65B0;&#x7EBF;&#x7A0B;&#x3002;</p>
-<h2 id="&#x7EBF;&#x7A0B;&#x4E2D;&#x65AD;">&#x7EBF;&#x7A0B;&#x4E2D;&#x65AD;</h2>
-<ol type="1">
-<li><p>&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x4E2D;&#x65AD;</p>
-<p>&#x7EBF;&#x7A0B;&#x5185;&#x7684;&#x903B;&#x8F91;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#x6216;&#x51FA;&#x73B0;&#x4E86;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x7684;&#x5F02;&#x5E38;&#x65F6;&#xFF0C;&#x7EBF;&#x7A0B;&#x5C06;&#x7EC8;&#x6B62;&#x3002;</p></li>
-<li><p>interrupt&#x4E2D;&#x65AD;</p>
-<p>&#x5F53;&#x5BF9;&#x7EBF;&#x7A0B;&#x8C03;&#x7528; <code>interrupt()</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x7EBF;&#x7A0B;&#x7684;<strong>&#x4E2D;&#x65AD;&#x72B6;&#x6001;</strong>&#x5C06;&#x88AB;&#x7F6E;&#x4F4D;&#x3002;</p></li>
-</ol>
-<ul>
-<li>RUNNABLE&#x72B6;&#x6001;&#x7684;&#x7EBF;&#x7A0B;&#x53EF;&#x901A;&#x8FC7; <code>isInterrupted()</code> &#x65B9;&#x6CD5;&#x68C0;&#x6D4B;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x4F4D;&#xFF0C;&#x4EE5;&#x5224;&#x65AD;&#x662F;&#x5426;&#x88AB;&#x4E2D;&#x65AD;&#x3002;</li>
-<li>&#x88AB;&#x963B;&#x585E;&#x7684;&#x7EBF;&#x7A0B;&#xFF08;&#x8C03;&#x7528; <code>sleep()</code> &#x6216; <code>wait()</code> &#x65B9;&#x6CD5;&#xFF09;&#x65E0;&#x6CD5;&#x4E3B;&#x52A8;&#x68C0;&#x6D4B;&#x4E2D;&#x65AD;&#x72B6;&#x6001;&#x4F4D;&#xFF0C;&#x4F46;&#x662F;&#x88AB;&#x4E2D;&#x65AD;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1; <code>InterruptedException</code> &#x5F02;&#x5E38;&#xFF0C;&#x901A;&#x8FC7;&#x6355;&#x83B7;&#xFF0C;&#x53EF;&#x5BF9;&#x4E2D;&#x65AD;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</li>
-</ul>
-<blockquote>
-<p>&#x65E0;&#x8BBA;&#x662F;&#x4E3B;&#x52A8;&#x68C0;&#x6D4B;&#x4E2D;&#x65AD;&#x72B6;&#x6001;&#x4F4D;&#x8FD8;&#x662F;&#x6355;&#x83B7;&#x5230; <code>InterruptedException</code> &#x4E2D;&#x65AD;&#xFF0C;&#x7EBF;&#x7A0B;&#x53EA;&#x662F;&#x53D7;&#x5230;&#x4E86;&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;&#xFF0C;&#x81F3;&#x4E8E;&#x5982;&#x4F55;&#x5904;&#x7406;&#xFF0C;&#x5C06;&#x7531;&#x7EBF;&#x7A0B;&#x81EA;&#x4E3B;&#x51B3;&#x5B9A;&#x3002;</p>
-</blockquote>
-<h2 id="&#x5F02;&#x5E38;&#x5904;&#x7406;">&#x5F02;&#x5E38;&#x5904;&#x7406;</h2>
-<p><code>run()</code> &#x65B9;&#x6CD5;&#x4E0D;&#x80FD;&#x629B;&#x51FA;&#x4EFB;&#x4F55;&#x53D7;&#x67E5;&#x5F02;&#x5E38;&#xFF0C;&#x4E14;&#x975E;&#x53D7;&#x67E5;&#x5F02;&#x5E38;&#x4F1A;&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x7EC8;&#x6B62;&#x3002;&#x53EF;&#x4EE5;&#x4E3A;&#x7EBF;&#x7A0B;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x7684;&#x5904;&#x7406;&#x5668;&#xFF08;&#x5B9E;&#x73B0; <code>Thread.UncaughtExceptionHandler</code> &#x63A5;&#x53E3;&#xFF09;&#xFF0C;&#x4E13;&#x95E8;&#x5904;&#x7406;&#x672A;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x3002;</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode java"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> App <span class="op">{</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">static</span> <span class="dt">void</span> <span class="fu">main</span><span class="op">(</span><span class="bu">String</span><span class="op">[]</span> args<span class="op">)</span> <span class="kw">throws</span> <span class="bu">Exception</span> <span class="op">{</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Thread</span> thread1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Thread</span><span class="op">(</span><span class="kw">new</span> <span class="bu">Runnable</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            <span class="kw">public</span> <span class="dt">void</span> <span class="fu">run</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                <span class="dt">int</span> j <span class="op">=</span> <span class="dv">10</span> <span class="op">/</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">});</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="co">// &#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528; Thread &#x7C7B;&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5; </span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">// setDefaultUncaughtExceptionHandler(UncaughtExceptionHandler eh) </span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="co">// &#x4E3A;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x5904;&#x7406;&#x5668;&#x3002;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        thread1<span class="op">.</span><span class="fu">setUncaughtExceptionHandler</span><span class="op">(</span><span class="kw">new</span> <span class="bu">Thread</span><span class="op">.</span><span class="fu">UncaughtExceptionHandler</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">@Override</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>            <span class="kw">public</span> <span class="dt">void</span> <span class="fu">uncaughtException</span><span class="op">(</span><span class="bu">Thread</span> t<span class="op">,</span> <span class="bu">Throwable</span> e<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;&#x7EBF;&#x7A0B;1&#x51FA;&#x73B0;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;&quot;</span><span class="op">+</span>e<span class="op">.</span><span class="fu">getMessage</span><span class="op">());</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="op">});</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        thread1<span class="op">.</span><span class="fu">start</span><span class="op">();</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Thread</span><span class="op">.</span><span class="fu">sleep</span><span class="op">(</span><span class="dv">2000</span><span class="op">);</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;&#x7B49;&#x5F85;2&#x79D2;&#xFF0C;&#x5728;&#x770B;&#x7EBF;&#x7A0B;1&#x7684;&#x72B6;&#x6001;&quot;</span> <span class="op">+</span> thread1<span class="op">.</span><span class="fu">getState</span><span class="op">().</span><span class="fu">toString</span><span class="op">());</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
-<pre><code>&#x7EBF;&#x7A0B;1&#x51FA;&#x73B0;&#x4E86;&#x5F02;&#x5E38;&#xFF0C;/ by zero
-&#x7B49;&#x5F85;2&#x79D2;&#xFF0C;&#x5728;&#x770B;&#x7EBF;&#x7A0B;1&#x7684;&#x72B6;&#x6001;TERMINATED</code></pre>
-<h2 id="&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;">&#x7EBF;&#x7A0B;&#x901A;&#x4FE1;</h2>
-<p>suspend &#x548C; resume &#x5DF2;&#x7ECF;&#x88AB;&#x5F03;&#x7528;&#xFF0C;suspend&#x4E0D;&#x4F1A;&#x91CA;&#x653E;&#x9501;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x9965;&#x997F;&#x3002;&#x5E76;&#x4E14;&#x5728;suspend&#x4E4B;&#x524D;&#x8FD0;&#x884C;resume&#x65F6;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x6C38;&#x4E45;&#x6302;&#x8D77;&#x3002;</p>
-<p>wait&#x548C;notify&#x5FC5;&#x987B;&#x5199;&#x5728;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x629B;&#x51FA; IllegalMonitorStateException &#x5F02;&#x5E38;&#x3002; wait&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x52A0;&#x5165;&#x7B49;&#x5F85;&#x96C6;&#x5408;&#xFF0C;&#x5E76;&#x4E14;&#x653E;&#x5F03;&#x5F53;&#x524D;&#x6301;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x9501;&#x3002;</p>
-<p>park&#x83B7;&#x5F97;&#x8BB8;&#x53EF;&#xFF08;permit&#xFF09;&#xFF0C;unpark&#x63D0;&#x4F9B;&#x8BB8;&#x53EF;&#x3002;&#x5982;&#x679C;&#x5728;unpark&#x540E;&#x8C03;&#x7528;park&#xFF0C;&#x7EBF;&#x7A0B;&#x5C06;&#x76F4;&#x63A5;&#x6D88;&#x8D39;&#x8BE5;&#x8BB8;&#x53EF;&#xFF0C;&#x65E0;&#x9700;&#x6302;&#x8D77;&#x7B49;&#x5F85;&#x3002;park&#x65B9;&#x6CD5;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x540C;&#x6B65;&#x9501;&#x3002;</p>
-<p>threadlocal</p>
-<h2 id="&#x7EBF;&#x7A0B;&#x6C60;">&#x7EBF;&#x7A0B;&#x6C60;</h2>
-<h1 id="&#x7EBF;&#x7A0B;&#x5207;&#x6362;">&#x7EBF;&#x7A0B;&#x5207;&#x6362;</h1>
-<figure>
-<img src="https://technotetech.oss-cn-shenzhen.aliyuncs.com/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/IMG_8CF4A2A44C42-1.jpeg?x-oss-process=style/size" alt="Java&#x7EBF;&#x7A0B;&#x7684;&#x72B6;&#x6001;"><figcaption aria-hidden="true">Java&#x7EBF;&#x7A0B;&#x7684;&#x72B6;&#x6001;</figcaption>
-</figure>
-<p>Java &#x7EBF;&#x7A0B;&#x6709; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span> &#x79CD;&#x72B6;&#x6001;&#xFF1A;</p>
-<ol type="1">
-<li>NEW&#xFF08;&#x521D;&#x59CB;&#x5316;&#x72B6;&#x6001;&#xFF09;</li>
-<li>RUNNABLE&#xFF08;&#x53EF;&#x8FD0;&#x884C; / &#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF09;</li>
-<li>BLOCKED&#xFF08;&#x963B;&#x585E;&#x72B6;&#x6001;&#xFF09;</li>
-<li>WAITING&#xFF08;&#x65E0;&#x65F6;&#x9650;&#x7B49;&#x5F85;&#xFF09;</li>
-<li>TIMED_WAITING&#xFF08;&#x6709;&#x65F6;&#x9650;&#x7B49;&#x5F85;&#xFF09;</li>
-<li>TERMINATED&#xFF08;&#x7EC8;&#x6B62;&#x72B6;&#x6001;&#xFF09;</li>
-</ol>
-<h2 id="runnable-&#x5207;&#x6362;&#x5230;-blocked"><code>Runnable</code> &#x5207;&#x6362;&#x5230; <code>BLOCKED</code></h2>
-<p>&#x7EBF;&#x7A0B;&#x7B49;&#x5F85; <code>synchronized</code> &#x7684;&#x9690;&#x5F0F;&#x9501;&#x65F6;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;&#x8FD9;&#x79CD;&#x8F6C;&#x6362;&#x3002;&#x7B49;&#x7EBF;&#x7A0B;&#x83B7;&#x5F97; <code>synchronized</code> &#x9501;&#x65F6;&#xFF0C;&#x53C8;&#x4F1A;&#x4ECE; <strong>BLOCKED</strong> &#x8F6C;&#x6362;&#x5230; <strong>RUNNABLE</strong>&#x3002;</p>
-<blockquote>
-<p>&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x963B;&#x585E;&#x5F0F;API&#x65F6;&#xFF0C;&#x5C3D;&#x7BA1;<a href="/&#x8BA1;&#x7B97;&#x673A;/&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;/&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;/1-&#x8FDB;&#x7A0B;&#x4E0E;&#x7EBF;&#x7A0B;/#&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;">&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5C42;&#x9762;&#x4F1A;&#x8F6C;&#x6362;&#x5230;&#x4F11;&#x7720;&#x72B6;&#x6001;</a>&#xFF0C;&#x4F46;&#x5728;JVM&#x5C42;&#x9762;&#xFF0C;&#x4F9D;&#x65E7;&#x662F;RUNNABLE&#x72B6;&#x6001;&#x3002;</p>
-</blockquote>
-<h2 id="runnable-&#x5207;&#x6362;&#x5230;-waiting"><code>Runnable</code> &#x5207;&#x6362;&#x5230; <code>WAITING</code></h2>
-<ol type="1">
-<li>&#x83B7;&#x5F97; <code>synchronized</code> &#x9501;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x8C03;&#x7528;<em>&#x65E0;&#x53C2;&#x6570;</em>&#x7684; <code>Object.wait()</code> &#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x8C03;&#x7528;<em>&#x65E0;&#x53C2;&#x6570;</em>&#x7684; <code>Thread.join()</code> &#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x8C03;&#x7528;<em>&#x65E0;&#x53C2;&#x6570;</em>&#x7684; <code>LockSupport.park()</code> &#x65B9;&#x6CD5;&#x3002;&#x5F85;&#x8C03;&#x7528; <code>LockSupport.unpark(Thread thread)</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x53EF;&#x5C06;&#x76EE;&#x6807;&#x7EBF;&#x7A0B;&#x5524;&#x9192;&#xFF0C;&#x76EE;&#x6807;&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x4ECE; <strong>WAITING</strong> &#x5207;&#x6362;&#x5230; <strong>RUNNABLE</strong>&#x3002;</li>
-</ol>
-<h2 id="runnable-&#x5207;&#x6362;&#x5230;-timed_waiting"><code>Runnable</code> &#x5207;&#x6362;&#x5230; <code>TIMED_WAITING</code></h2>
-<ol type="1">
-<li>&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>Thread.sleep(long millis)</code> &#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x83B7;&#x5F97; <code>synchronized</code> &#x9501;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>Object.wait(long timeout)</code> &#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>Thread.join(long millis)</code> &#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>LockSupport.parkNanos(Object blocker, long deadline)</code> &#x65B9;&#x6CD5;&#x3002;</li>
-<li>&#x8C03;&#x7528;<em>&#x5E26;&#x8D85;&#x65F6;&#x53C2;&#x6570;</em>&#x7684; <code>LockSupport.parkUntil(long deadline)</code> &#x65B9;&#x6CD5;&#x3002;</li>
-</ol>
-<blockquote>
-<p>&#x4ECE; RUNNABLE &#x5207;&#x6362;&#x5230; TIMED_WAITING &#x548C; WAITING &#x72B6;&#x6001;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x4EC5;&#x4EC5;&#x662F;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#x591A;&#x4E86;&#x8D85;&#x65F6;&#x53C2;&#x6570;&#x3002;</p>
-</blockquote>
-<h2 id="new-&#x5207;&#x6362;&#x5230;-runnable"><code>NEW</code> &#x5207;&#x6362;&#x5230; <code>Runnable</code></h2>
-<p>Java &#x521A;&#x521B;&#x5EFA;&#x51FA; <code>Thread</code> &#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x7EBF;&#x7A0B;&#x5C31;&#x662F; <strong>NEW</strong> &#x72B6;&#x6001;&#x3002;&#x6B64;&#x65F6;&#x8BE5;&#x7EBF;&#x7A0B;&#x4E0D;&#x4F1A;&#x88AB;&#x7CFB;&#x7EDF;&#x6267;&#x884C;&#xFF0C;&#x5FC5;&#x987B;&#x8C03;&#x7528; <code>start()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4F1A;&#x5C06;&#x7EBF;&#x7A0B;&#x72B6;&#x6001;&#x5207;&#x6362;&#x4E3A; <strong>RUNNABLE</strong>&#xFF0C;&#x7CFB;&#x7EDF;&#x4FBF;&#x4F1A;&#x6839;&#x636E;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;&#x9002;&#x65F6;&#x8FD0;&#x884C;&#x3002;</p>
-<h2 id="runnable-&#x5207;&#x6362;&#x5230;-terminated"><code>Runnable</code> &#x5207;&#x6362;&#x5230; <code>TERMINATED</code></h2>
-<p>&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5B8C; <code>run()</code> &#x65B9;&#x6CD5;&#x6216;&#x88AB;&#x5F3A;&#x884C;&#x4E2D;&#x65AD;&#x540E;&#x4E3B;&#x52A8;&#x9000;&#x51FA;&#xFF0C;&#x5373;&#x5207;&#x6362;&#x5230; <strong>TERMINATED</strong> &#x72B6;&#x6001;&#x3002;</p>
-
-</div>
-
-
-    <div class="post-guide">
-        <div class="item left">
-            
-              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/%E5%B9%B6%E5%8F%91/4-%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  4-线程同步
-              </a>
-            
-        </div>
-        <div class="item right">
-            
-              <a href="/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/3-%E6%AD%BB%E9%94%81%E4%B8%8E%E9%A5%A5%E9%A5%BF/">
-                3-死锁与饥饿
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </a>
-            
-        </div>
-    </div>
-
-
-
-
-<script>
-	
-	
-</script>
 	</div>
 	<div id="footer">
 	<p>
